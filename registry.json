@@ -1,0 +1,197 @@
+{
+  "version": "2.0.0",
+  "last_updated": "2026-02-17T18:00:00Z",
+  "components": [
+    {
+      "id": "skill-own-golden-systemcheck",
+      "type": "skill",
+      "owner": "own",
+      "name": "Golden Systemcheck",
+      "description": "7-Bereich-Konsistenzpruefung fuer Projekte mit golden-operations Profil",
+      "path": "skills/skill-own-golden-systemcheck",
+      "git": null,
+      "tags": ["golden", "systemcheck", "validation"],
+      "created": "2026-02-17",
+      "status": "planned",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-own-golden-tagesabschluss",
+      "type": "skill",
+      "owner": "own",
+      "name": "Golden Tagesabschluss",
+      "description": "Session-Ende-Routine mit Log-Aktualisierung und Git-Check",
+      "path": "skills/skill-own-golden-tagesabschluss",
+      "git": null,
+      "tags": ["golden", "session", "daily"],
+      "created": "2026-02-17",
+      "status": "planned",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-own-golden-import",
+      "type": "skill",
+      "owner": "own",
+      "name": "Golden Import",
+      "description": "Inbox-Verarbeitung fuer Input/-Verzeichnis",
+      "path": "skills/skill-own-golden-import",
+      "git": null,
+      "tags": ["golden", "import", "inbox"],
+      "created": "2026-02-17",
+      "status": "planned",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-own-golden-session-boot",
+      "type": "skill",
+      "owner": "own",
+      "name": "Golden Session-Boot",
+      "description": "4-Phasen-Session-Start mit Orientierung, Kontext, Input und Tagesplan",
+      "path": "skills/skill-own-golden-session-boot",
+      "git": null,
+      "tags": ["golden", "session", "boot"],
+      "created": "2026-02-17",
+      "status": "planned",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-own-golden-weekly-planning",
+      "type": "skill",
+      "owner": "own",
+      "name": "Golden Wochenplanung",
+      "description": "Wochenplanung mit Rueckblick, Kapazitaetsschaetzung und Priorisierung",
+      "path": "skills/skill-own-golden-weekly-planning",
+      "git": null,
+      "tags": ["golden", "planning", "weekly"],
+      "created": "2026-02-17",
+      "status": "planned",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-own-we-brand-guidelines",
+      "type": "skill",
+      "owner": "own",
+      "name": "WE Brand Guidelines",
+      "description": "Corporate Identity von Wagner-Emden IT Services / WE AI — Farben, Typografie, Tonalitaet, Vorlagen",
+      "path": "skills/skill-own-we-brand-guidelines",
+      "git": {
+        "repo": "https://github.com/darkenizer/cc-skill-we-brand-guidelines.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["branding", "corporate-identity", "templates", "documents"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md", "beispiele/", "resources/"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "template-community-ai-coding-starter-kit",
+      "type": "template",
+      "owner": "community",
+      "name": "AI Coding Starter Kit",
+      "description": "Komplettes Coding-Template mit 6-Agenten-Workflow fuer Next.js + Supabase + Vercel",
+      "path": "templates/template-community-ai-coding-starter-kit",
+      "git": {
+        "repo": "https://github.com/AlexPEClub/ai-coding-starter-kit.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["coding", "webapp", "fullstack", "supabase", "vercel"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": null,
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "mcp-own-papierkram",
+      "type": "mcp",
+      "owner": "own",
+      "name": "Papierkram MCP Server",
+      "description": "MCP-Server fuer die Papierkram.de Buchhaltungs-API — Rechnungen, Kontakte, Projekte, Zeiterfassung",
+      "path": "mcp-servers/mcp-own-papierkram",
+      "git": {
+        "repo": "https://github.com/Wagner-Emden-IT-Services/papierkram-mcp-server.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["papierkram", "buchhaltung", "accounting", "invoices", "mcp"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "runtime": "node",
+        "entry_point": "dist/index.js",
+        "files": null,
+        "post_install": "npm install --production"
+      },
+      "requires": {
+        "env_vars": [
+          {"name": "PAPIERKRAM_API_KEY", "description": "API-Schluessel fuer Papierkram.de", "required": true},
+          {"name": "PAPIERKRAM_SUBDOMAIN", "description": "Subdomain des Papierkram-Accounts", "required": true}
+        ],
+        "dependencies": ["node"],
+        "min_version": null
+      }
+    }
+  ]
+}
