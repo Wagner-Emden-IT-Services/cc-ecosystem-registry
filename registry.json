@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
-  "last_updated": "2026-02-17T18:00:00Z",
+  "version": "2.1.0",
+  "last_updated": "2026-02-18T10:00:00Z",
   "components": [
     {
       "id": "skill-own-golden-systemcheck",
@@ -190,6 +190,250 @@
           {"name": "PAPIERKRAM_SUBDOMAIN", "description": "Subdomain des Papierkram-Accounts", "required": true}
         ],
         "dependencies": ["node"],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-own-leistungsnachweis",
+      "type": "skill",
+      "owner": "own",
+      "name": "Leistungsnachweis",
+      "description": "Erstellt externen Leistungsnachweis aus Worklog mit Uebersetzung, Zeitschaetzung und Papierkram-Buchung",
+      "path": "skills/skill-own-leistungsnachweis",
+      "git": {
+        "repo": "https://github.com/Wagner-Emden-IT-Services/cc-skill-leistungsnachweis.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-17T15:30:00Z",
+        "auto_update": true
+      },
+      "tags": ["leistungsnachweis", "reporting", "papierkram", "zeiterfassung", "customer-project"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": ["mcp-own-papierkram"],
+        "min_version": null
+      }
+    },
+    {
+      "id": "mcp-community-n8n",
+      "type": "mcp",
+      "owner": "community",
+      "name": "n8n MCP Server",
+      "description": "MCP-Server fuer n8n Workflow-Automatisierung — Node-Dokumentation, Validierung, Templates und Workflow-Management",
+      "path": "mcp-servers/mcp-community-n8n",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-mcp.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "workflow", "automation", "mcp", "nodes"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "runtime": "node",
+        "files": null,
+        "post_install": "npm install --production"
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": ["node"],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-mcp-tools-expert",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n MCP Tools Expert",
+      "description": "Expertenwissen fuer die effektive Nutzung der n8n-mcp MCP-Tools — Node-Suche, Validierung, Templates, Workflow-Management",
+      "path": "skills/skill-community-n8n-mcp-tools-expert",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-mcp-tools-expert",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "mcp", "tools", "workflow"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": ["mcp-community-n8n"],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-workflow-patterns",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n Workflow Patterns",
+      "description": "Bewaehrte Architektur-Patterns fuer n8n Workflows — Webhook, HTTP API, Datenbank, AI Agent, Scheduled Tasks",
+      "path": "skills/skill-community-n8n-workflow-patterns",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-workflow-patterns",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "workflow", "patterns", "architecture"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-expression-syntax",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n Expression Syntax",
+      "description": "n8n Expression-Syntax validieren und haeufige Fehler beheben — {{}}-Patterns, $json/$node Variablen, Webhook-Daten",
+      "path": "skills/skill-community-n8n-expression-syntax",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-expression-syntax",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "expressions", "syntax", "debugging"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-validation-expert",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n Validation Expert",
+      "description": "Validierungsfehler interpretieren und beheben — Error-Typen, False Positives, Auto-Fix, Validation-Profiles",
+      "path": "skills/skill-community-n8n-validation-expert",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-validation-expert",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "validation", "debugging", "errors"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-node-configuration",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n Node Configuration",
+      "description": "Operations-basierte Node-Konfiguration — Property-Abhaengigkeiten, Detail-Levels, Node-Type-Patterns",
+      "path": "skills/skill-community-n8n-node-configuration",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-node-configuration",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "nodes", "configuration", "properties"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-code-javascript",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n Code JavaScript",
+      "description": "JavaScript in n8n Code Nodes — $input/$json Syntax, HTTP-Requests mit $helpers, DateTime, Code-Node-Modi",
+      "path": "skills/skill-community-n8n-code-javascript",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-code-javascript",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "javascript", "code", "scripting"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
+        "min_version": null
+      }
+    },
+    {
+      "id": "skill-community-n8n-code-python",
+      "type": "skill",
+      "owner": "community",
+      "name": "n8n Code Python",
+      "description": "Python in n8n Code Nodes — _input/_json Syntax, Standard Library, Python-Limitierungen in n8n",
+      "path": "skills/skill-community-n8n-code-python",
+      "git": {
+        "repo": "https://github.com/czlonkowski/n8n-skills.git",
+        "branch": "main",
+        "sparse_path": "skills/n8n-code-python",
+        "last_sync": null,
+        "auto_update": true
+      },
+      "tags": ["n8n", "python", "code", "scripting"],
+      "created": "2026-02-17",
+      "status": "active",
+      "install": {
+        "files": ["SKILL.md"],
+        "post_install": null
+      },
+      "requires": {
+        "env_vars": [],
+        "dependencies": [],
         "min_version": null
       }
     }
