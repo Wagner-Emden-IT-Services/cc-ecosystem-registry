@@ -1,6 +1,32 @@
 {
-  "version": "2.1.0",
-  "last_updated": "2026-02-18T10:00:00Z",
+  "version": "1.7.0",
+  "last_updated": "2026-02-20T18:00:00Z",
+  "capability_categories": {
+    "accounting": "Buchhaltung",
+    "crm": "Kontaktverwaltung",
+    "project": "Projektmanagement",
+    "tracking": "Zeiterfassung & Tracking",
+    "document-generation": "Dokumentenerstellung",
+    "branding": "Corporate Identity & Design",
+    "communication": "Kommunikation",
+    "recherche": "Recherche & Wissenssuche",
+    "automation": "Workflow-Automatisierung",
+    "scaffolding": "Projekt-Scaffolding",
+    "workflow": "Workflow-Patterns",
+    "coding": "Code & Scripting",
+    "validation": "Validierung & Debugging",
+    "session": "Session-Management",
+    "planning": "Planung & Kapazitaet",
+    "sales": "Vertrieb & Angebote",
+    "integration": "System-Integration",
+    "code-quality": "Code-Qualitaet & Review",
+    "dev-tools": "Entwicklungs-Werkzeuge",
+    "security": "Sicherheit",
+    "business-ops": "Geschaeftsprozesse",
+    "data-analytics": "Datenanalyse",
+    "learning": "Lernmodus & Erklaerungen",
+    "lsp": "Language Server Protocol"
+  },
   "components": [
     {
       "id": "skill-own-golden-systemcheck",
@@ -10,18 +36,39 @@
       "description": "7-Bereich-Konsistenzpruefung fuer Projekte mit golden-operations Profil",
       "path": "skills/skill-own-golden-systemcheck",
       "git": null,
-      "tags": ["golden", "systemcheck", "validation"],
+      "tags": [
+        "golden",
+        "systemcheck",
+        "validation"
+      ],
       "created": "2026-02-17",
       "status": "planned",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "golden-systemcheck",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "project-consistency-check",
+          "label": "Projekt-Konsistenzpruefung",
+          "category": "validation",
+          "requires": []
+        },
+        {
+          "name": "git-health-check",
+          "label": "Git-Status-Pruefung",
+          "category": "validation",
+          "requires": []
+        },
+        {
+          "name": "input-queue-check",
+          "label": "Input-Queue-Pruefung",
+          "category": "session",
+          "requires": []
+        }
+      ]
     },
     {
       "id": "skill-own-golden-tagesabschluss",
@@ -31,18 +78,33 @@
       "description": "Session-Ende-Routine mit Log-Aktualisierung und Git-Check",
       "path": "skills/skill-own-golden-tagesabschluss",
       "git": null,
-      "tags": ["golden", "session", "daily"],
+      "tags": [
+        "golden",
+        "session",
+        "daily"
+      ],
       "created": "2026-02-17",
       "status": "planned",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "golden-tagesabschluss",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "session-close",
+          "label": "Session-Abschluss",
+          "category": "session",
+          "requires": []
+        },
+        {
+          "name": "session-log-update",
+          "label": "Session-Log-Aktualisierung",
+          "category": "session",
+          "requires": []
+        }
+      ]
     },
     {
       "id": "skill-own-golden-import",
@@ -52,18 +114,33 @@
       "description": "Inbox-Verarbeitung fuer Input/-Verzeichnis",
       "path": "skills/skill-own-golden-import",
       "git": null,
-      "tags": ["golden", "import", "inbox"],
+      "tags": [
+        "golden",
+        "import",
+        "inbox"
+      ],
       "created": "2026-02-17",
       "status": "planned",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "golden-import",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "inbox-processing",
+          "label": "Inbox-Verarbeitung",
+          "category": "session",
+          "requires": []
+        },
+        {
+          "name": "file-classification",
+          "label": "Datei-Klassifikation",
+          "category": "automation",
+          "requires": []
+        }
+      ]
     },
     {
       "id": "skill-own-golden-session-boot",
@@ -73,18 +150,39 @@
       "description": "4-Phasen-Session-Start mit Orientierung, Kontext, Input und Tagesplan",
       "path": "skills/skill-own-golden-session-boot",
       "git": null,
-      "tags": ["golden", "session", "boot"],
+      "tags": [
+        "golden",
+        "session",
+        "boot"
+      ],
       "created": "2026-02-17",
       "status": "planned",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "golden-session-boot",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "session-start",
+          "label": "Session-Start",
+          "category": "session",
+          "requires": []
+        },
+        {
+          "name": "context-loading",
+          "label": "Kontext-Laden",
+          "category": "session",
+          "requires": []
+        },
+        {
+          "name": "daily-planning",
+          "label": "Tagesplan-Vorschlag",
+          "category": "planning",
+          "requires": []
+        }
+      ]
     },
     {
       "id": "skill-own-golden-weekly-planning",
@@ -94,45 +192,163 @@
       "description": "Wochenplanung mit Rueckblick, Kapazitaetsschaetzung und Priorisierung",
       "path": "skills/skill-own-golden-weekly-planning",
       "git": null,
-      "tags": ["golden", "planning", "weekly"],
+      "tags": [
+        "golden",
+        "planning",
+        "weekly"
+      ],
       "created": "2026-02-17",
       "status": "planned",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "golden-weekly-planning",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "weekly-review",
+          "label": "Wochenrueckblick",
+          "category": "planning",
+          "requires": []
+        },
+        {
+          "name": "capacity-planning",
+          "label": "Kapazitaetsplanung",
+          "category": "planning",
+          "requires": []
+        },
+        {
+          "name": "priority-management",
+          "label": "Priorisierung",
+          "category": "planning",
+          "requires": []
+        }
+      ]
     },
     {
       "id": "skill-own-we-brand-guidelines",
       "type": "skill",
       "owner": "own",
       "name": "WE Brand Guidelines",
-      "description": "Corporate Identity von Wagner-Emden IT Services / WE AI — Farben, Typografie, Tonalitaet, Vorlagen",
+      "description": "Corporate Identity von Wagner-Emden IT Services / WE AI — Farben, Typografie, Tonalitaet, Design Tokens. Reines CI-Wissen, Dokumentengenerierung im Plugin plugin-own-we-documents.",
       "path": "skills/skill-own-we-brand-guidelines",
       "git": {
         "repo": "https://github.com/darkenizer/cc-skill-we-brand-guidelines.git",
         "branch": "main",
         "sparse_path": null,
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:36Z",
         "auto_update": true
       },
-      "tags": ["branding", "corporate-identity", "templates", "documents"],
+      "tags": [
+        "branding",
+        "corporate-identity",
+        "design-tokens",
+        "tonalitaet"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md", "beispiele/", "resources/"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "we-brand-guidelines",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "color-palette",
+          "label": "Farbpalette & Design Tokens",
+          "category": "branding",
+          "requires": []
+        },
+        {
+          "name": "typography",
+          "label": "Typografie-System",
+          "category": "branding",
+          "requires": []
+        },
+        {
+          "name": "logo-guidelines",
+          "label": "Logo-Richtlinien",
+          "category": "branding",
+          "requires": []
+        },
+        {
+          "name": "tone-of-voice",
+          "label": "Tonalitaet & Sprachstil",
+          "category": "branding",
+          "requires": []
+        },
+        {
+          "name": "document-templates-reference",
+          "label": "Dokumentvorlagen-Referenz",
+          "category": "branding",
+          "requires": []
+        }
+      ]
+    },
+    {
+      "id": "plugin-own-we-documents",
+      "type": "plugin",
+      "owner": "own",
+      "name": "WE Documents",
+      "description": "Dokumentengenerierung im Corporate Design von Wagner-Emden IT Services — Rechnungen, Angebote, Briefe, Praesentationen, Signaturen, One-Pager",
+      "path": "plugins/plugin-own-we-documents",
+      "git": null,
+      "tags": [
+        "documents",
+        "docx",
+        "pptx",
+        "html",
+        "rechnung",
+        "angebot",
+        "brief",
+        "praesentation",
+        "signatur"
+      ],
+      "created": "2026-02-18",
+      "status": "active",
+      "dependencies": [
+        "skill-own-we-brand-guidelines"
+      ],
+      "capabilities": [
+        {
+          "name": "invoice-generation",
+          "label": "Rechnungserstellung",
+          "category": "document-generation",
+          "command": "/rechnung"
+        },
+        {
+          "name": "proposal-generation",
+          "label": "Angebotserstellung",
+          "category": "sales",
+          "command": "/angebot"
+        },
+        {
+          "name": "letter-generation",
+          "label": "Brieferstellung",
+          "category": "document-generation",
+          "command": "/brief"
+        },
+        {
+          "name": "presentation-generation",
+          "label": "Praesentationserstellung",
+          "category": "document-generation",
+          "command": "/praesentation"
+        },
+        {
+          "name": "one-pager-generation",
+          "label": "One-Pager-Erstellung",
+          "category": "document-generation",
+          "command": "/one-pager"
+        },
+        {
+          "name": "email-signature",
+          "label": "E-Mail-Signatur",
+          "category": "communication",
+          "command": "/signatur"
+        }
+      ]
     },
     {
       "id": "template-community-ai-coding-starter-kit",
@@ -145,21 +361,39 @@
         "repo": "https://github.com/AlexPEClub/ai-coding-starter-kit.git",
         "branch": "main",
         "sparse_path": null,
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:20:35Z",
         "auto_update": true
       },
-      "tags": ["coding", "webapp", "fullstack", "supabase", "vercel"],
+      "tags": [
+        "coding",
+        "webapp",
+        "fullstack",
+        "supabase",
+        "vercel"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": null,
-        "post_install": null
-      },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "fullstack-webapp-scaffold",
+          "label": "Fullstack-Webapp-Scaffolding",
+          "category": "scaffolding",
+          "stack": [
+            "nextjs",
+            "supabase",
+            "vercel",
+            "typescript"
+          ]
+        },
+        {
+          "name": "multi-agent-workflow",
+          "label": "6-Agenten-Workflow",
+          "category": "automation",
+          "stack": [
+            "claude-code"
+          ]
+        }
+      ]
     },
     {
       "id": "mcp-own-papierkram",
@@ -172,26 +406,157 @@
         "repo": "https://github.com/Wagner-Emden-IT-Services/papierkram-mcp-server.git",
         "branch": "main",
         "sparse_path": null,
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:36Z",
         "auto_update": true
       },
-      "tags": ["papierkram", "buchhaltung", "accounting", "invoices", "mcp"],
+      "tags": [
+        "papierkram",
+        "buchhaltung",
+        "accounting",
+        "invoices",
+        "mcp"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
+      "mcp_config": {
         "runtime": "node",
         "entry_point": "dist/index.js",
-        "files": null,
-        "post_install": "npm install --production"
-      },
-      "requires": {
+        "post_install": "npm install --production",
+        "transport": "stdio",
         "env_vars": [
-          {"name": "PAPIERKRAM_API_KEY", "description": "API-Schluessel fuer Papierkram.de", "required": true},
-          {"name": "PAPIERKRAM_SUBDOMAIN", "description": "Subdomain des Papierkram-Accounts", "required": true}
-        ],
-        "dependencies": ["node"],
-        "min_version": null
-      }
+          {
+            "name": "PAPIERKRAM_API_KEY",
+            "description": "API-Schluessel fuer Papierkram.de",
+            "required": true
+          },
+          {
+            "name": "PAPIERKRAM_SUBDOMAIN",
+            "description": "Subdomain des Papierkram-Accounts",
+            "required": true
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "invoice-management",
+          "label": "Rechnungsverwaltung",
+          "category": "accounting",
+          "tools": [
+            "list_invoices",
+            "get_invoice",
+            "create_invoice",
+            "update_invoice",
+            "delete_invoice",
+            "cancel_invoice",
+            "archive_invoice",
+            "send_invoice",
+            "download_invoice_pdf"
+          ]
+        },
+        {
+          "name": "estimate-management",
+          "label": "Angebotsverwaltung",
+          "category": "sales",
+          "tools": [
+            "list_estimates",
+            "get_estimate",
+            "create_estimate",
+            "update_estimate",
+            "delete_estimate",
+            "send_estimate",
+            "download_estimate_pdf"
+          ]
+        },
+        {
+          "name": "contact-management",
+          "label": "Kontaktverwaltung",
+          "category": "crm",
+          "tools": [
+            "list_companies",
+            "get_company",
+            "create_company",
+            "update_company",
+            "delete_company",
+            "list_contact_persons",
+            "get_contact_person",
+            "create_contact_person",
+            "update_contact_person",
+            "delete_contact_person"
+          ]
+        },
+        {
+          "name": "project-management",
+          "label": "Projektverwaltung",
+          "category": "project",
+          "tools": [
+            "list_projects",
+            "get_project",
+            "create_project",
+            "update_project",
+            "delete_project",
+            "unarchive_project",
+            "archive_project"
+          ]
+        },
+        {
+          "name": "time-tracking",
+          "label": "Zeiterfassung",
+          "category": "tracking",
+          "tools": [
+            "list_time_entries",
+            "get_time_entry",
+            "create_time_entry",
+            "update_time_entry",
+            "delete_time_entry"
+          ]
+        },
+        {
+          "name": "task-management",
+          "label": "Aufgabenverwaltung",
+          "category": "project",
+          "tools": [
+            "list_tasks",
+            "get_task",
+            "create_task",
+            "update_task",
+            "delete_task"
+          ]
+        },
+        {
+          "name": "expense-management",
+          "label": "Ausgabenverwaltung",
+          "category": "accounting",
+          "tools": [
+            "list_expense_vouchers",
+            "get_expense_voucher",
+            "create_expense_voucher",
+            "update_expense_voucher",
+            "delete_expense_voucher"
+          ]
+        },
+        {
+          "name": "banking",
+          "label": "Bankverbindungen & Transaktionen",
+          "category": "accounting",
+          "tools": [
+            "list_bank_connections",
+            "get_bank_connection",
+            "list_bank_transactions",
+            "get_bank_transaction"
+          ]
+        },
+        {
+          "name": "account-info",
+          "label": "Kontoinformationen",
+          "category": "accounting",
+          "tools": [
+            "get_account_info",
+            "list_payment_terms",
+            "list_propositions",
+            "get_proposition"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-own-leistungsnachweis",
@@ -204,21 +569,35 @@
         "repo": "https://github.com/Wagner-Emden-IT-Services/cc-skill-leistungsnachweis.git",
         "branch": "main",
         "sparse_path": null,
-        "last_sync": "2026-02-17T15:30:00Z",
+        "last_sync": "2026-02-20T08:21:36Z",
         "auto_update": true
       },
-      "tags": ["leistungsnachweis", "reporting", "papierkram", "zeiterfassung", "customer-project"],
+      "tags": [
+        "leistungsnachweis",
+        "reporting",
+        "papierkram",
+        "zeiterfassung",
+        "customer-project"
+      ],
       "created": "2026-02-17",
-      "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "status": "deprecated",
+      "deprecated_by": "plugin-own-zeiterfassung",
+      "scope": "global",
+      "deploy": {
+        "global_name": "leistungsnachweis",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": ["mcp-own-papierkram"],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "performance-report",
+          "label": "Leistungsnachweis-Erstellung",
+          "category": "tracking",
+          "requires": [
+            "mcp-own-papierkram"
+          ]
+        }
+      ]
     },
     {
       "id": "mcp-community-n8n",
@@ -231,22 +610,82 @@
         "repo": "https://github.com/czlonkowski/n8n-mcp.git",
         "branch": "main",
         "sparse_path": null,
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:08Z",
         "auto_update": true
       },
-      "tags": ["n8n", "workflow", "automation", "mcp", "nodes"],
+      "tags": [
+        "n8n",
+        "workflow",
+        "automation",
+        "mcp",
+        "nodes"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
+      "mcp_config": {
         "runtime": "node",
-        "files": null,
-        "post_install": "npm install --production"
+        "entry_point": "dist/index.js",
+        "post_install": "npm install --production",
+        "transport": "stdio",
+        "env_vars": []
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": ["node"],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "node-documentation",
+          "label": "Node-Dokumentation",
+          "category": "automation",
+          "tools": [
+            "tools_documentation",
+            "search_nodes",
+            "get_node"
+          ]
+        },
+        {
+          "name": "workflow-validation",
+          "label": "Workflow-Validierung",
+          "category": "validation",
+          "tools": [
+            "validate_node",
+            "validate_workflow",
+            "n8n_validate_workflow",
+            "n8n_autofix_workflow"
+          ]
+        },
+        {
+          "name": "template-management",
+          "label": "Template-Verwaltung",
+          "category": "automation",
+          "tools": [
+            "get_template",
+            "search_templates",
+            "n8n_deploy_template"
+          ]
+        },
+        {
+          "name": "workflow-management",
+          "label": "Workflow-Verwaltung",
+          "category": "automation",
+          "tools": [
+            "n8n_create_workflow",
+            "n8n_get_workflow",
+            "n8n_update_full_workflow",
+            "n8n_update_partial_workflow",
+            "n8n_delete_workflow",
+            "n8n_list_workflows"
+          ]
+        },
+        {
+          "name": "workflow-execution",
+          "label": "Workflow-Ausfuehrung",
+          "category": "automation",
+          "tools": [
+            "n8n_test_workflow",
+            "n8n_executions",
+            "n8n_health_check",
+            "n8n_workflow_versions"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-mcp-tools-expert",
@@ -259,21 +698,33 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-mcp-tools-expert",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:11Z",
         "auto_update": true
       },
-      "tags": ["n8n", "mcp", "tools", "workflow"],
+      "tags": [
+        "n8n",
+        "mcp",
+        "tools",
+        "workflow"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-mcp-tools-expert",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": ["mcp-community-n8n"],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "n8n-tool-usage",
+          "label": "n8n MCP-Tool-Expertise",
+          "category": "integration",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-workflow-patterns",
@@ -286,21 +737,57 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-workflow-patterns",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:13Z",
         "auto_update": true
       },
-      "tags": ["n8n", "workflow", "patterns", "architecture"],
+      "tags": [
+        "n8n",
+        "workflow",
+        "patterns",
+        "architecture"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-workflow-patterns",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "webhook-patterns",
+          "label": "Webhook-Patterns",
+          "category": "workflow",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "api-patterns",
+          "label": "HTTP-API-Patterns",
+          "category": "workflow",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "scheduled-patterns",
+          "label": "Scheduled-Task-Patterns",
+          "category": "workflow",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "ai-agent-patterns",
+          "label": "AI-Agent-Patterns",
+          "category": "workflow",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-expression-syntax",
@@ -313,21 +800,41 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-expression-syntax",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:14Z",
         "auto_update": true
       },
-      "tags": ["n8n", "expressions", "syntax", "debugging"],
+      "tags": [
+        "n8n",
+        "expressions",
+        "syntax",
+        "debugging"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-expression-syntax",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "expression-validation",
+          "label": "Expression-Validierung",
+          "category": "coding",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "expression-debugging",
+          "label": "Expression-Debugging",
+          "category": "validation",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-validation-expert",
@@ -340,21 +847,41 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-validation-expert",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:16Z",
         "auto_update": true
       },
-      "tags": ["n8n", "validation", "debugging", "errors"],
+      "tags": [
+        "n8n",
+        "validation",
+        "debugging",
+        "errors"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-validation-expert",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "workflow-error-analysis",
+          "label": "Workflow-Fehleranalyse",
+          "category": "validation",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "auto-fix",
+          "label": "Auto-Fix fuer Validierungsfehler",
+          "category": "validation",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-node-configuration",
@@ -367,21 +894,41 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-node-configuration",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:18Z",
         "auto_update": true
       },
-      "tags": ["n8n", "nodes", "configuration", "properties"],
+      "tags": [
+        "n8n",
+        "nodes",
+        "configuration",
+        "properties"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-node-configuration",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "node-setup",
+          "label": "Node-Konfiguration",
+          "category": "automation",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "property-management",
+          "label": "Property-Verwaltung",
+          "category": "automation",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-code-javascript",
@@ -394,21 +941,41 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-code-javascript",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:20Z",
         "auto_update": true
       },
-      "tags": ["n8n", "javascript", "code", "scripting"],
+      "tags": [
+        "n8n",
+        "javascript",
+        "code",
+        "scripting"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-code-javascript",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "javascript-code-nodes",
+          "label": "JavaScript in Code Nodes",
+          "category": "coding",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        },
+        {
+          "name": "http-helpers",
+          "label": "HTTP-Requests mit $helpers",
+          "category": "coding",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
     },
     {
       "id": "skill-community-n8n-code-python",
@@ -421,21 +988,1209 @@
         "repo": "https://github.com/czlonkowski/n8n-skills.git",
         "branch": "main",
         "sparse_path": "skills/n8n-code-python",
-        "last_sync": null,
+        "last_sync": "2026-02-20T08:21:21Z",
         "auto_update": true
       },
-      "tags": ["n8n", "python", "code", "scripting"],
+      "tags": [
+        "n8n",
+        "python",
+        "code",
+        "scripting"
+      ],
       "created": "2026-02-17",
       "status": "active",
-      "install": {
-        "files": ["SKILL.md"],
-        "post_install": null
+      "scope": "global",
+      "deploy": {
+        "global_name": "n8n-code-python",
+        "last_deployed": null,
+        "deployed_hash": null
       },
-      "requires": {
-        "env_vars": [],
-        "dependencies": [],
-        "min_version": null
-      }
+      "capabilities": [
+        {
+          "name": "python-code-nodes",
+          "label": "Python in Code Nodes",
+          "category": "coding",
+          "requires": [
+            "mcp-community-n8n"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "template-own-n8n-workflow-starter",
+      "type": "template",
+      "owner": "own",
+      "name": "n8n Multi-Agent Workflow Starter",
+      "description": "Strukturiertes Projekttemplate fuer n8n-Workflow-Automatisierung — 6-Agenten-Pipeline von Anforderung bis Deployment, mit optionalem Microsoft 365 Integrationsmodul",
+      "path": "templates/template-own-n8n-workflow-starter",
+      "git": null,
+      "tags": [
+        "n8n",
+        "workflow",
+        "automation",
+        "multi-agent",
+        "microsoft-365",
+        "graph-api"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "capabilities": [
+        {
+          "name": "n8n-project-scaffold",
+          "label": "n8n Projekt-Scaffolding",
+          "category": "scaffolding",
+          "stack": [
+            "n8n",
+            "javascript",
+            "microsoft-365"
+          ]
+        },
+        {
+          "name": "multi-agent-pipeline",
+          "label": "6-Agenten-Pipeline",
+          "category": "automation",
+          "stack": [
+            "n8n",
+            "claude-code"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plugin-own-zeiterfassung",
+      "type": "plugin",
+      "owner": "own",
+      "name": "Zeiterfassung",
+      "description": "Worklog-Management, Leistungsnachweis-Generierung und Papierkram-Zeiterfassung",
+      "path": "plugins/plugin-own-zeiterfassung",
+      "git": {
+        "repo": "https://github.com/Wagner-Emden-IT-Services/cc-plugin-zeiterfassung.git",
+        "branch": "main",
+        "last_sync": "2026-02-20T08:21:36Z",
+        "auto_update": true
+      },
+      "tags": [
+        "zeiterfassung",
+        "worklog",
+        "leistungsnachweis",
+        "papierkram",
+        "reporting",
+        "customer-project"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "dependencies": [
+        "mcp-own-papierkram"
+      ],
+      "capabilities": [
+        {
+          "name": "performance-report-generation",
+          "label": "Leistungsnachweis-Erstellung",
+          "category": "tracking",
+          "command": "/leistungsnachweis"
+        },
+        {
+          "name": "worklog-status",
+          "label": "Worklog-Status",
+          "category": "tracking",
+          "command": "/worklog-status"
+        },
+        {
+          "name": "worklog-migration",
+          "label": "Worklog-Migration",
+          "category": "tracking",
+          "command": "/worklog-migrate"
+        },
+        {
+          "name": "time-booking",
+          "label": "Papierkram-Zeitbuchung",
+          "category": "tracking",
+          "command": "/leistungsnachweis"
+        },
+        {
+          "name": "token-cost-calculation",
+          "label": "Token-Kostenberechnung",
+          "category": "accounting",
+          "command": "/leistungsnachweis"
+        }
+      ]
+    },
+    {
+      "id": "skill-own-kommunikation",
+      "type": "skill",
+      "owner": "own",
+      "name": "Kommunikations-Customizer",
+      "description": "Kundenspezifische Kommunikationsstil-Simulation auf Basis von E-Mail-Analyse und Papierkram-Matching",
+      "path": "skills/skill-own-kommunikation",
+      "git": null,
+      "tags": [
+        "communication",
+        "email",
+        "style",
+        "customer",
+        "papierkram"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "scope": "global",
+      "deploy": {
+        "global_name": "kommunikation",
+        "commands_namespace": "comm",
+        "deploy_exclude": [
+          "profiles/",
+          "inbox/",
+          "config.yaml"
+        ],
+        "last_deployed": null,
+        "deployed_hash": null
+      },
+      "capabilities": [
+        {
+          "name": "customer-style-matching",
+          "label": "Kundenspezifischer Kommunikationsstil",
+          "category": "communication",
+          "requires": [
+            "mcp-own-papierkram"
+          ]
+        },
+        {
+          "name": "email-analysis",
+          "label": "E-Mail-Stilanalyse",
+          "category": "communication",
+          "requires": []
+        },
+        {
+          "name": "address-mode-management",
+          "label": "Du/Sie-Verwaltung",
+          "category": "communication",
+          "requires": []
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-context7",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Context7 — Live Documentation",
+      "description": "Echtzeit-Dokumentation und Code-Beispiele fuer Libraries und Frameworks",
+      "path": "mcp-servers/mcp-community-context7",
+      "git": {
+        "repo": "https://github.com/upstash/context7",
+        "branch": "master",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:22:47Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "documentation",
+        "code-examples"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "remote",
+        "transport": "http",
+        "url": "https://mcp.context7.com/mcp",
+        "env_vars": []
+      },
+      "capabilities": [
+        {
+          "name": "library-documentation",
+          "label": "Library-Dokumentation",
+          "category": "recherche",
+          "tools": [
+            "resolve-library-id",
+            "query-docs"
+          ]
+        },
+        {
+          "name": "code-examples",
+          "label": "Code-Beispiele",
+          "category": "recherche",
+          "tools": [
+            "query-docs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-brave-search",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Brave Search — Web Search",
+      "description": "Privacy-fokussierte Websuche mit lokaler Suche, offiziell von Anthropic maintained",
+      "path": "mcp-servers/mcp-community-brave-search",
+      "git": {
+        "repo": "https://github.com/brave/brave-search-mcp-server",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:24Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "web-search",
+        "privacy"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "node",
+        "entry_point": "dist/index.js",
+        "post_install": "npm install --production",
+        "transport": "stdio",
+        "env_vars": [
+          {
+            "name": "BRAVE_API_KEY",
+            "description": "Brave Search API Key (https://brave.com/search/api/)",
+            "required": true
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "web-search",
+          "label": "Websuche",
+          "category": "recherche",
+          "tools": [
+            "brave_web_search"
+          ]
+        },
+        {
+          "name": "local-search",
+          "label": "Lokale Suche",
+          "category": "recherche",
+          "tools": [
+            "brave_local_search"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-exa",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Exa AI — Semantic Search",
+      "description": "Semantische Suche, Code-Kontext, Company Research, Deep Researcher Agent",
+      "path": "mcp-servers/mcp-community-exa",
+      "git": {
+        "repo": "https://github.com/exa-labs/exa-mcp-server",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:25Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "semantic-search",
+        "code-context"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "remote",
+        "transport": "http",
+        "url": "https://mcp.exa.ai/mcp",
+        "env_vars": [
+          {
+            "name": "EXA_API_KEY",
+            "description": "Exa API Key (optional fuer Free Tier)",
+            "required": false
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "semantic-search",
+          "label": "Semantische Suche",
+          "category": "recherche",
+          "tools": [
+            "web_search_exa"
+          ]
+        },
+        {
+          "name": "code-context-search",
+          "label": "Code-Kontext-Suche",
+          "category": "recherche",
+          "tools": [
+            "get_code_context_exa"
+          ]
+        },
+        {
+          "name": "company-research",
+          "label": "Company Research",
+          "category": "recherche",
+          "tools": [
+            "company_research_exa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-jina",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Jina AI Reader — Content Extraction",
+      "description": "Web-Content zu Markdown, ArXiv-Suche, Screenshots, Parallel-Verarbeitung",
+      "path": "mcp-servers/mcp-community-jina",
+      "git": {
+        "repo": "https://github.com/jina-ai/MCP",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:27Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "content-extraction",
+        "arxiv",
+        "markdown"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "remote",
+        "transport": "sse",
+        "url": "https://mcp.jina.ai/sse",
+        "env_vars": [
+          {
+            "name": "JINA_API_KEY",
+            "description": "Jina API Key (optional fuer Free Tier)",
+            "required": false
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "url-to-markdown",
+          "label": "URL zu Markdown",
+          "category": "recherche",
+          "tools": [
+            "read_url"
+          ]
+        },
+        {
+          "name": "web-search-jina",
+          "label": "Websuche",
+          "category": "recherche",
+          "tools": [
+            "search"
+          ]
+        },
+        {
+          "name": "arxiv-access",
+          "label": "ArXiv-Zugriff",
+          "category": "recherche",
+          "tools": [
+            "fetch_arxiv"
+          ]
+        },
+        {
+          "name": "screenshot",
+          "label": "Screenshot-Erstellung",
+          "category": "recherche",
+          "tools": [
+            "screenshot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-tavily",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Tavily — Production Web Research",
+      "description": "Websuche mit Extraction, Crawling, Site-Mapping fuer systematische Recherche",
+      "path": "mcp-servers/mcp-community-tavily",
+      "git": {
+        "repo": "https://github.com/tavily-ai/tavily-mcp",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:29Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "web-search",
+        "extraction",
+        "crawling"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "node",
+        "entry_point": "npx tavily-mcp@latest",
+        "transport": "stdio",
+        "env_vars": [
+          {
+            "name": "TAVILY_API_KEY",
+            "description": "Tavily API Key (https://tavily.com)",
+            "required": true
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "web-search-tavily",
+          "label": "Websuche",
+          "category": "recherche",
+          "tools": [
+            "tavily_search"
+          ]
+        },
+        {
+          "name": "content-extraction",
+          "label": "Content-Extraktion",
+          "category": "recherche",
+          "tools": [
+            "tavily_extract"
+          ]
+        },
+        {
+          "name": "site-crawling",
+          "label": "Site-Crawling",
+          "category": "recherche",
+          "tools": [
+            "tavily_crawl"
+          ]
+        },
+        {
+          "name": "site-mapping",
+          "label": "Site-Mapping",
+          "category": "recherche",
+          "tools": [
+            "tavily_map"
+          ]
+        },
+        {
+          "name": "deep-research-tavily",
+          "label": "Deep Research",
+          "category": "recherche",
+          "tools": [
+            "tavily_research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-arxiv",
+      "type": "mcp",
+      "owner": "community",
+      "name": "ArXiv — Academic Papers",
+      "description": "Akademische Papers suchen, downloaden und analysieren (2.4 Mio+ Preprints)",
+      "path": "mcp-servers/mcp-community-arxiv",
+      "git": {
+        "repo": "https://github.com/blazickjp/arxiv-mcp-server",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:30Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "academic",
+        "papers",
+        "arxiv"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "python",
+        "entry_point": "arxiv-mcp-server",
+        "post_install": "uv tool install arxiv-mcp-server",
+        "transport": "stdio",
+        "env_vars": []
+      },
+      "capabilities": [
+        {
+          "name": "paper-search",
+          "label": "Paper-Suche",
+          "category": "recherche",
+          "tools": [
+            "search_papers"
+          ]
+        },
+        {
+          "name": "paper-download",
+          "label": "Paper-Download",
+          "category": "recherche",
+          "tools": [
+            "download_paper"
+          ]
+        },
+        {
+          "name": "paper-analysis",
+          "label": "Paper-Analyse",
+          "category": "recherche",
+          "tools": [
+            "list_papers",
+            "read_paper"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-wikipedia",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Wikipedia — Knowledge Base",
+      "description": "Strukturierter Zugang zu Wikipedia: Suche, Artikel-Abruf, multilingual (300+ Sprachen)",
+      "path": "mcp-servers/mcp-community-wikipedia",
+      "git": {
+        "repo": "https://github.com/Rudra-ravi/wikipedia-mcp",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:32Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "knowledge",
+        "wikipedia",
+        "multilingual"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "node",
+        "entry_point": "npx wikipedia-mcp",
+        "transport": "stdio",
+        "env_vars": []
+      },
+      "capabilities": [
+        {
+          "name": "wiki-search",
+          "label": "Wikipedia-Suche",
+          "category": "recherche",
+          "tools": [
+            "search"
+          ]
+        },
+        {
+          "name": "wiki-article",
+          "label": "Artikel-Abruf",
+          "category": "recherche",
+          "tools": [
+            "get_article"
+          ]
+        },
+        {
+          "name": "wiki-random",
+          "label": "Zufallsartikel",
+          "category": "recherche",
+          "tools": [
+            "random"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-firecrawl",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Firecrawl — Enterprise Web Scraping",
+      "description": "Web-Scraping mit JS-Rendering, Site-Mapping, Batch-Scraping, strukturierte Extraktion",
+      "path": "mcp-servers/mcp-community-firecrawl",
+      "git": {
+        "repo": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:35Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "scraping",
+        "extraction",
+        "crawling"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "node",
+        "entry_point": "npx firecrawl-mcp",
+        "transport": "stdio",
+        "env_vars": [
+          {
+            "name": "FIRECRAWL_API_KEY",
+            "description": "Firecrawl API Key (https://firecrawl.dev)",
+            "required": true
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "web-scraping",
+          "label": "Web-Scraping",
+          "category": "recherche",
+          "tools": [
+            "firecrawl_scrape"
+          ]
+        },
+        {
+          "name": "site-mapping-firecrawl",
+          "label": "Site-Mapping",
+          "category": "recherche",
+          "tools": [
+            "firecrawl_map"
+          ]
+        },
+        {
+          "name": "site-crawling-firecrawl",
+          "label": "Site-Crawling",
+          "category": "recherche",
+          "tools": [
+            "firecrawl_crawl"
+          ]
+        },
+        {
+          "name": "structured-extraction",
+          "label": "Strukturierte Extraktion",
+          "category": "recherche",
+          "tools": [
+            "firecrawl_extract"
+          ]
+        },
+        {
+          "name": "firecrawl-search",
+          "label": "Firecrawl-Suche",
+          "category": "recherche",
+          "tools": [
+            "firecrawl_search"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcp-community-perplexity",
+      "type": "mcp",
+      "owner": "community",
+      "name": "Perplexity AI — Deep Research",
+      "description": "KI-gestuetzte Websuche mit Deep Research, Reasoning und Quellenangaben",
+      "path": "mcp-servers/mcp-community-perplexity",
+      "git": {
+        "repo": "https://github.com/ppl-ai/modelcontextprotocol",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T08:21:36Z",
+        "auto_update": true
+      },
+      "tags": [
+        "recherche",
+        "web-search",
+        "deep-research",
+        "reasoning",
+        "ai-search"
+      ],
+      "created": "2026-02-17",
+      "status": "active",
+      "mcp_config": {
+        "runtime": "node",
+        "entry_point": "npx @perplexity-ai/mcp-server",
+        "transport": "stdio",
+        "env_vars": [
+          {
+            "name": "PERPLEXITY_API_KEY",
+            "description": "Perplexity API Key (https://perplexity.ai)",
+            "required": true
+          }
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "ai-search",
+          "label": "KI-Websuche",
+          "category": "recherche",
+          "tools": [
+            "perplexity_ask",
+            "perplexity_search"
+          ]
+        },
+        {
+          "name": "deep-research-perplexity",
+          "label": "Deep Research",
+          "category": "recherche",
+          "tools": [
+            "perplexity_research"
+          ]
+        },
+        {
+          "name": "reasoning",
+          "label": "Reasoning mit Quellen",
+          "category": "recherche",
+          "tools": [
+            "perplexity_reason"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill-own-deep-research",
+      "type": "skill",
+      "owner": "own",
+      "name": "Deep Research",
+      "description": "Multi-Source Recherche-Orchestrierung — optimale Kombination aller 9 Recherche-MCP-Server fuer strukturierte, umfassende Recherche",
+      "path": "skills/skill-own-deep-research",
+      "git": null,
+      "tags": [
+        "recherche",
+        "research",
+        "multi-source",
+        "orchestration"
+      ],
+      "created": "2026-02-19",
+      "status": "active",
+      "scope": "global",
+      "dependencies": [
+        "mcp-community-perplexity",
+        "mcp-community-context7",
+        "mcp-community-brave-search",
+        "mcp-community-exa",
+        "mcp-community-jina",
+        "mcp-community-tavily",
+        "mcp-community-arxiv",
+        "mcp-community-wikipedia",
+        "mcp-community-firecrawl"
+      ],
+      "deploy": {
+        "global_name": "deep-research",
+        "last_deployed": null,
+        "deployed_hash": null
+      },
+      "capabilities": [
+        {
+          "name": "fact-checking",
+          "label": "Fakten-Check",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-perplexity",
+            "mcp-community-brave-search",
+            "mcp-community-wikipedia"
+          ]
+        },
+        {
+          "name": "library-research",
+          "label": "Library-/Framework-Recherche",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-context7",
+            "mcp-community-exa",
+            "mcp-community-jina"
+          ]
+        },
+        {
+          "name": "tech-evaluation",
+          "label": "Technologie-Evaluation",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-perplexity",
+            "mcp-community-exa",
+            "mcp-community-arxiv",
+            "mcp-community-brave-search",
+            "mcp-community-tavily"
+          ]
+        },
+        {
+          "name": "documentation-analysis",
+          "label": "Dokumentations-Analyse",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-tavily",
+            "mcp-community-jina"
+          ]
+        },
+        {
+          "name": "code-research",
+          "label": "Code-Recherche",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-context7",
+            "mcp-community-exa",
+            "mcp-community-perplexity"
+          ]
+        },
+        {
+          "name": "academic-research",
+          "label": "Akademische Recherche",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-arxiv",
+            "mcp-community-wikipedia",
+            "mcp-community-perplexity"
+          ]
+        },
+        {
+          "name": "market-research",
+          "label": "Markt-/Company-Research",
+          "category": "recherche",
+          "requires": [
+            "mcp-community-exa",
+            "mcp-community-brave-search",
+            "mcp-community-tavily",
+            "mcp-community-firecrawl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plugin-community-anthropic-knowledge-work",
+      "type": "plugin",
+      "owner": "community",
+      "name": "Anthropic Knowledge Work Plugins",
+      "description": "Offizielle Anthropic-Plugins fuer Wissensarbeit — Sales, Finance, Legal, Marketing, Data, Customer Support, Productivity, Enterprise Search, Bio Research, Product Management, Plugin Management",
+      "path": "plugins/plugin-community-anthropic-knowledge-work",
+      "git": {
+        "repo": "https://github.com/anthropics/knowledge-work-plugins.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T18:00:00Z",
+        "auto_update": true
+      },
+      "tags": [
+        "anthropic",
+        "official",
+        "knowledge-work",
+        "sales",
+        "finance",
+        "legal",
+        "marketing",
+        "data",
+        "customer-support",
+        "productivity"
+      ],
+      "created": "2026-02-20",
+      "status": "active",
+      "marketplace": {
+        "sub_plugins": [
+          "sales",
+          "finance",
+          "legal",
+          "marketing",
+          "data",
+          "customer-support",
+          "enterprise-search",
+          "bio-research",
+          "productivity",
+          "product-management",
+          "cowork-plugin-management"
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "sales-workflows",
+          "label": "Vertriebs-Workflows",
+          "category": "sales",
+          "sub_plugin": "sales"
+        },
+        {
+          "name": "finance-analysis",
+          "label": "Finanz-Analyse & Berichte",
+          "category": "business-ops",
+          "sub_plugin": "finance"
+        },
+        {
+          "name": "legal-review",
+          "label": "Juristische Pruefung & Analyse",
+          "category": "business-ops",
+          "sub_plugin": "legal"
+        },
+        {
+          "name": "marketing-content",
+          "label": "Marketing-Content-Erstellung",
+          "category": "business-ops",
+          "sub_plugin": "marketing"
+        },
+        {
+          "name": "data-analysis",
+          "label": "Datenanalyse & Transformation",
+          "category": "data-analytics",
+          "sub_plugin": "data"
+        },
+        {
+          "name": "customer-support-workflows",
+          "label": "Kundensupport-Workflows",
+          "category": "business-ops",
+          "sub_plugin": "customer-support"
+        },
+        {
+          "name": "enterprise-search-integration",
+          "label": "Enterprise-Suche",
+          "category": "recherche",
+          "sub_plugin": "enterprise-search"
+        },
+        {
+          "name": "bio-research",
+          "label": "Bio-/Life-Sciences-Recherche",
+          "category": "recherche",
+          "sub_plugin": "bio-research"
+        },
+        {
+          "name": "productivity-workflows",
+          "label": "Produktivitaets-Workflows",
+          "category": "planning",
+          "sub_plugin": "productivity"
+        },
+        {
+          "name": "product-management-workflows",
+          "label": "Produktmanagement-Workflows",
+          "category": "planning",
+          "sub_plugin": "product-management"
+        },
+        {
+          "name": "plugin-lifecycle-management",
+          "label": "Plugin-Verwaltung",
+          "category": "dev-tools",
+          "sub_plugin": "cowork-plugin-management"
+        }
+      ]
+    },
+    {
+      "id": "plugin-community-anthropic-official-directory",
+      "type": "plugin",
+      "owner": "community",
+      "name": "Anthropic Official Plugin Directory",
+      "description": "Offizielles Anthropic-Plugin-Verzeichnis — Code-Review, Feature-Dev, Security, Plugin-Dev, Hookify, Commit-Commands, PR-Review, Agent SDK, CLAUDE.md-Management, Frontend-Design, Learning-Mode, 11 LSP-Plugins, externe Plugin-Referenzen",
+      "path": "plugins/plugin-community-anthropic-official-directory",
+      "git": {
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "branch": "main",
+        "sparse_path": null,
+        "last_sync": "2026-02-20T18:00:00Z",
+        "auto_update": true
+      },
+      "tags": [
+        "anthropic",
+        "official",
+        "code-review",
+        "security",
+        "lsp",
+        "plugin-dev",
+        "feature-dev",
+        "frontend"
+      ],
+      "created": "2026-02-20",
+      "status": "active",
+      "marketplace": {
+        "sub_plugins": [
+          "code-review",
+          "feature-dev",
+          "security-guidance",
+          "plugin-dev",
+          "skill-creator",
+          "hookify",
+          "commit-commands",
+          "pr-review-toolkit",
+          "ralph-loop",
+          "agent-sdk-dev",
+          "claude-md-management",
+          "claude-code-setup",
+          "frontend-design",
+          "code-simplifier",
+          "explanatory-output-style",
+          "learning-output-style",
+          "playground",
+          "example-plugin"
+        ],
+        "lsp_plugins": [
+          "typescript-lsp",
+          "pyright-lsp",
+          "rust-analyzer-lsp",
+          "gopls-lsp",
+          "clangd-lsp",
+          "jdtls-lsp",
+          "kotlin-lsp",
+          "swift-lsp",
+          "php-lsp",
+          "lua-lsp",
+          "csharp-lsp"
+        ],
+        "external_plugins": [
+          "asana",
+          "context7",
+          "firebase",
+          "github",
+          "gitlab",
+          "greptile",
+          "laravel-boost",
+          "linear",
+          "playwright",
+          "serena",
+          "slack",
+          "stripe",
+          "supabase"
+        ]
+      },
+      "capabilities": [
+        {
+          "name": "code-review",
+          "label": "Code-Review & Qualitaetspruefung",
+          "category": "code-quality",
+          "sub_plugin": "code-review"
+        },
+        {
+          "name": "feature-development",
+          "label": "Feature-Entwicklung",
+          "category": "dev-tools",
+          "sub_plugin": "feature-dev"
+        },
+        {
+          "name": "security-guidance",
+          "label": "Sicherheitsanalyse & Guidance",
+          "category": "security",
+          "sub_plugin": "security-guidance"
+        },
+        {
+          "name": "plugin-development",
+          "label": "Plugin-Entwicklung",
+          "category": "dev-tools",
+          "sub_plugin": "plugin-dev"
+        },
+        {
+          "name": "skill-creation",
+          "label": "Skill-Erstellung",
+          "category": "dev-tools",
+          "sub_plugin": "skill-creator"
+        },
+        {
+          "name": "hook-creation",
+          "label": "Hook-Erstellung & Hookify",
+          "category": "dev-tools",
+          "sub_plugin": "hookify"
+        },
+        {
+          "name": "commit-workflow",
+          "label": "Commit-Workflow-Optimierung",
+          "category": "dev-tools",
+          "sub_plugin": "commit-commands"
+        },
+        {
+          "name": "pr-review",
+          "label": "Pull-Request-Review",
+          "category": "code-quality",
+          "sub_plugin": "pr-review-toolkit"
+        },
+        {
+          "name": "agent-sdk-development",
+          "label": "Agent SDK Entwicklung",
+          "category": "dev-tools",
+          "sub_plugin": "agent-sdk-dev"
+        },
+        {
+          "name": "claude-md-management",
+          "label": "CLAUDE.md Verwaltung",
+          "category": "dev-tools",
+          "sub_plugin": "claude-md-management"
+        },
+        {
+          "name": "claude-code-setup",
+          "label": "Claude Code Projekt-Setup",
+          "category": "dev-tools",
+          "sub_plugin": "claude-code-setup"
+        },
+        {
+          "name": "frontend-design",
+          "label": "Frontend-Design & UI",
+          "category": "coding",
+          "sub_plugin": "frontend-design"
+        },
+        {
+          "name": "code-simplification",
+          "label": "Code-Vereinfachung",
+          "category": "code-quality",
+          "sub_plugin": "code-simplifier"
+        },
+        {
+          "name": "explanatory-output",
+          "label": "Erklaerende Ausgabe",
+          "category": "learning",
+          "sub_plugin": "explanatory-output-style"
+        },
+        {
+          "name": "learning-mode",
+          "label": "Lernmodus-Ausgabe",
+          "category": "learning",
+          "sub_plugin": "learning-output-style"
+        },
+        {
+          "name": "lsp-typescript",
+          "label": "TypeScript LSP",
+          "category": "lsp",
+          "sub_plugin": "typescript-lsp"
+        },
+        {
+          "name": "lsp-python",
+          "label": "Python LSP (Pyright)",
+          "category": "lsp",
+          "sub_plugin": "pyright-lsp"
+        },
+        {
+          "name": "lsp-rust",
+          "label": "Rust LSP (rust-analyzer)",
+          "category": "lsp",
+          "sub_plugin": "rust-analyzer-lsp"
+        },
+        {
+          "name": "lsp-go",
+          "label": "Go LSP (gopls)",
+          "category": "lsp",
+          "sub_plugin": "gopls-lsp"
+        },
+        {
+          "name": "lsp-cpp",
+          "label": "C/C++ LSP (clangd)",
+          "category": "lsp",
+          "sub_plugin": "clangd-lsp"
+        },
+        {
+          "name": "lsp-java",
+          "label": "Java LSP (jdtls)",
+          "category": "lsp",
+          "sub_plugin": "jdtls-lsp"
+        },
+        {
+          "name": "lsp-kotlin",
+          "label": "Kotlin LSP",
+          "category": "lsp",
+          "sub_plugin": "kotlin-lsp"
+        },
+        {
+          "name": "lsp-swift",
+          "label": "Swift LSP",
+          "category": "lsp",
+          "sub_plugin": "swift-lsp"
+        },
+        {
+          "name": "lsp-php",
+          "label": "PHP LSP",
+          "category": "lsp",
+          "sub_plugin": "php-lsp"
+        },
+        {
+          "name": "lsp-lua",
+          "label": "Lua LSP",
+          "category": "lsp",
+          "sub_plugin": "lua-lsp"
+        },
+        {
+          "name": "lsp-csharp",
+          "label": "C# LSP",
+          "category": "lsp",
+          "sub_plugin": "csharp-lsp"
+        },
+        {
+          "name": "iterative-development",
+          "label": "Iterative Entwicklung (Ralph Loop)",
+          "category": "dev-tools",
+          "sub_plugin": "ralph-loop"
+        },
+        {
+          "name": "plugin-playground",
+          "label": "Plugin-Playground",
+          "category": "dev-tools",
+          "sub_plugin": "playground"
+        }
+      ]
     }
   ]
 }
