@@ -1,0 +1,4833 @@
+{
+  "generated_at": "2026-02-20T09:31:16Z",
+  "source_version": "1.7.0",
+  "stats": {
+    "total_components": 33,
+    "total_capabilities": 141,
+    "total_categories": 24,
+    "total_search_terms": 483,
+    "total_dependency_edges": 27
+  },
+  "by_category": {
+    "accounting": {
+      "label": "Buchhaltung",
+      "capabilities": [
+        {
+          "capability_name": "invoice-management",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Rechnungsverwaltung",
+          "tools": [
+            "list_invoices",
+            "get_invoice",
+            "create_invoice",
+            "update_invoice",
+            "delete_invoice",
+            "cancel_invoice",
+            "archive_invoice",
+            "send_invoice",
+            "download_invoice_pdf"
+          ]
+        },
+        {
+          "capability_name": "expense-management",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Ausgabenverwaltung",
+          "tools": [
+            "list_expense_vouchers",
+            "get_expense_voucher",
+            "create_expense_voucher",
+            "update_expense_voucher",
+            "delete_expense_voucher"
+          ]
+        },
+        {
+          "capability_name": "banking",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Bankverbindungen & Transaktionen",
+          "tools": [
+            "list_bank_connections",
+            "get_bank_connection",
+            "list_bank_transactions",
+            "get_bank_transaction"
+          ]
+        },
+        {
+          "capability_name": "account-info",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Kontoinformationen",
+          "tools": [
+            "get_account_info",
+            "list_payment_terms",
+            "list_propositions",
+            "get_proposition"
+          ]
+        },
+        {
+          "capability_name": "token-cost-calculation",
+          "component_id": "plugin-own-zeiterfassung",
+          "component_type": "plugin",
+          "label": "Token-Kostenberechnung",
+          "command": "/leistungsnachweis"
+        }
+      ]
+    },
+    "crm": {
+      "label": "Kontaktverwaltung",
+      "capabilities": [
+        {
+          "capability_name": "contact-management",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Kontaktverwaltung",
+          "tools": [
+            "list_companies",
+            "get_company",
+            "create_company",
+            "update_company",
+            "delete_company",
+            "list_contact_persons",
+            "get_contact_person",
+            "create_contact_person",
+            "update_contact_person",
+            "delete_contact_person"
+          ]
+        }
+      ]
+    },
+    "project": {
+      "label": "Projektmanagement",
+      "capabilities": [
+        {
+          "capability_name": "project-management",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Projektverwaltung",
+          "tools": [
+            "list_projects",
+            "get_project",
+            "create_project",
+            "update_project",
+            "delete_project",
+            "unarchive_project",
+            "archive_project"
+          ]
+        },
+        {
+          "capability_name": "task-management",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Aufgabenverwaltung",
+          "tools": [
+            "list_tasks",
+            "get_task",
+            "create_task",
+            "update_task",
+            "delete_task"
+          ]
+        }
+      ]
+    },
+    "tracking": {
+      "label": "Zeiterfassung & Tracking",
+      "capabilities": [
+        {
+          "capability_name": "time-tracking",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Zeiterfassung",
+          "tools": [
+            "list_time_entries",
+            "get_time_entry",
+            "create_time_entry",
+            "update_time_entry",
+            "delete_time_entry"
+          ]
+        },
+        {
+          "capability_name": "performance-report",
+          "component_id": "skill-own-leistungsnachweis",
+          "component_type": "skill",
+          "label": "Leistungsnachweis-Erstellung"
+        },
+        {
+          "capability_name": "performance-report-generation",
+          "component_id": "plugin-own-zeiterfassung",
+          "component_type": "plugin",
+          "label": "Leistungsnachweis-Erstellung",
+          "command": "/leistungsnachweis"
+        },
+        {
+          "capability_name": "worklog-status",
+          "component_id": "plugin-own-zeiterfassung",
+          "component_type": "plugin",
+          "label": "Worklog-Status",
+          "command": "/worklog-status"
+        },
+        {
+          "capability_name": "worklog-migration",
+          "component_id": "plugin-own-zeiterfassung",
+          "component_type": "plugin",
+          "label": "Worklog-Migration",
+          "command": "/worklog-migrate"
+        },
+        {
+          "capability_name": "time-booking",
+          "component_id": "plugin-own-zeiterfassung",
+          "component_type": "plugin",
+          "label": "Papierkram-Zeitbuchung",
+          "command": "/leistungsnachweis"
+        }
+      ]
+    },
+    "document-generation": {
+      "label": "Dokumentenerstellung",
+      "capabilities": [
+        {
+          "capability_name": "invoice-generation",
+          "component_id": "plugin-own-we-documents",
+          "component_type": "plugin",
+          "label": "Rechnungserstellung",
+          "command": "/rechnung"
+        },
+        {
+          "capability_name": "letter-generation",
+          "component_id": "plugin-own-we-documents",
+          "component_type": "plugin",
+          "label": "Brieferstellung",
+          "command": "/brief"
+        },
+        {
+          "capability_name": "presentation-generation",
+          "component_id": "plugin-own-we-documents",
+          "component_type": "plugin",
+          "label": "Praesentationserstellung",
+          "command": "/praesentation"
+        },
+        {
+          "capability_name": "one-pager-generation",
+          "component_id": "plugin-own-we-documents",
+          "component_type": "plugin",
+          "label": "One-Pager-Erstellung",
+          "command": "/one-pager"
+        }
+      ]
+    },
+    "branding": {
+      "label": "Corporate Identity & Design",
+      "capabilities": [
+        {
+          "capability_name": "color-palette",
+          "component_id": "skill-own-we-brand-guidelines",
+          "component_type": "skill",
+          "label": "Farbpalette & Design Tokens"
+        },
+        {
+          "capability_name": "typography",
+          "component_id": "skill-own-we-brand-guidelines",
+          "component_type": "skill",
+          "label": "Typografie-System"
+        },
+        {
+          "capability_name": "logo-guidelines",
+          "component_id": "skill-own-we-brand-guidelines",
+          "component_type": "skill",
+          "label": "Logo-Richtlinien"
+        },
+        {
+          "capability_name": "tone-of-voice",
+          "component_id": "skill-own-we-brand-guidelines",
+          "component_type": "skill",
+          "label": "Tonalitaet & Sprachstil"
+        },
+        {
+          "capability_name": "document-templates-reference",
+          "component_id": "skill-own-we-brand-guidelines",
+          "component_type": "skill",
+          "label": "Dokumentvorlagen-Referenz"
+        }
+      ]
+    },
+    "communication": {
+      "label": "Kommunikation",
+      "capabilities": [
+        {
+          "capability_name": "email-signature",
+          "component_id": "plugin-own-we-documents",
+          "component_type": "plugin",
+          "label": "E-Mail-Signatur",
+          "command": "/signatur"
+        },
+        {
+          "capability_name": "customer-style-matching",
+          "component_id": "skill-own-kommunikation",
+          "component_type": "skill",
+          "label": "Kundenspezifischer Kommunikationsstil"
+        },
+        {
+          "capability_name": "email-analysis",
+          "component_id": "skill-own-kommunikation",
+          "component_type": "skill",
+          "label": "E-Mail-Stilanalyse"
+        },
+        {
+          "capability_name": "address-mode-management",
+          "component_id": "skill-own-kommunikation",
+          "component_type": "skill",
+          "label": "Du/Sie-Verwaltung"
+        }
+      ]
+    },
+    "recherche": {
+      "label": "Recherche & Wissenssuche",
+      "capabilities": [
+        {
+          "capability_name": "library-documentation",
+          "component_id": "mcp-community-context7",
+          "component_type": "mcp",
+          "label": "Library-Dokumentation",
+          "tools": [
+            "resolve-library-id",
+            "query-docs"
+          ]
+        },
+        {
+          "capability_name": "code-examples",
+          "component_id": "mcp-community-context7",
+          "component_type": "mcp",
+          "label": "Code-Beispiele",
+          "tools": [
+            "query-docs"
+          ]
+        },
+        {
+          "capability_name": "web-search",
+          "component_id": "mcp-community-brave-search",
+          "component_type": "mcp",
+          "label": "Websuche",
+          "tools": [
+            "brave_web_search"
+          ]
+        },
+        {
+          "capability_name": "local-search",
+          "component_id": "mcp-community-brave-search",
+          "component_type": "mcp",
+          "label": "Lokale Suche",
+          "tools": [
+            "brave_local_search"
+          ]
+        },
+        {
+          "capability_name": "semantic-search",
+          "component_id": "mcp-community-exa",
+          "component_type": "mcp",
+          "label": "Semantische Suche",
+          "tools": [
+            "web_search_exa"
+          ]
+        },
+        {
+          "capability_name": "code-context-search",
+          "component_id": "mcp-community-exa",
+          "component_type": "mcp",
+          "label": "Code-Kontext-Suche",
+          "tools": [
+            "get_code_context_exa"
+          ]
+        },
+        {
+          "capability_name": "company-research",
+          "component_id": "mcp-community-exa",
+          "component_type": "mcp",
+          "label": "Company Research",
+          "tools": [
+            "company_research_exa"
+          ]
+        },
+        {
+          "capability_name": "url-to-markdown",
+          "component_id": "mcp-community-jina",
+          "component_type": "mcp",
+          "label": "URL zu Markdown",
+          "tools": [
+            "read_url"
+          ]
+        },
+        {
+          "capability_name": "web-search-jina",
+          "component_id": "mcp-community-jina",
+          "component_type": "mcp",
+          "label": "Websuche",
+          "tools": [
+            "search"
+          ]
+        },
+        {
+          "capability_name": "arxiv-access",
+          "component_id": "mcp-community-jina",
+          "component_type": "mcp",
+          "label": "ArXiv-Zugriff",
+          "tools": [
+            "fetch_arxiv"
+          ]
+        },
+        {
+          "capability_name": "screenshot",
+          "component_id": "mcp-community-jina",
+          "component_type": "mcp",
+          "label": "Screenshot-Erstellung",
+          "tools": [
+            "screenshot"
+          ]
+        },
+        {
+          "capability_name": "web-search-tavily",
+          "component_id": "mcp-community-tavily",
+          "component_type": "mcp",
+          "label": "Websuche",
+          "tools": [
+            "tavily_search"
+          ]
+        },
+        {
+          "capability_name": "content-extraction",
+          "component_id": "mcp-community-tavily",
+          "component_type": "mcp",
+          "label": "Content-Extraktion",
+          "tools": [
+            "tavily_extract"
+          ]
+        },
+        {
+          "capability_name": "site-crawling",
+          "component_id": "mcp-community-tavily",
+          "component_type": "mcp",
+          "label": "Site-Crawling",
+          "tools": [
+            "tavily_crawl"
+          ]
+        },
+        {
+          "capability_name": "site-mapping",
+          "component_id": "mcp-community-tavily",
+          "component_type": "mcp",
+          "label": "Site-Mapping",
+          "tools": [
+            "tavily_map"
+          ]
+        },
+        {
+          "capability_name": "deep-research-tavily",
+          "component_id": "mcp-community-tavily",
+          "component_type": "mcp",
+          "label": "Deep Research",
+          "tools": [
+            "tavily_research"
+          ]
+        },
+        {
+          "capability_name": "paper-search",
+          "component_id": "mcp-community-arxiv",
+          "component_type": "mcp",
+          "label": "Paper-Suche",
+          "tools": [
+            "search_papers"
+          ]
+        },
+        {
+          "capability_name": "paper-download",
+          "component_id": "mcp-community-arxiv",
+          "component_type": "mcp",
+          "label": "Paper-Download",
+          "tools": [
+            "download_paper"
+          ]
+        },
+        {
+          "capability_name": "paper-analysis",
+          "component_id": "mcp-community-arxiv",
+          "component_type": "mcp",
+          "label": "Paper-Analyse",
+          "tools": [
+            "list_papers",
+            "read_paper"
+          ]
+        },
+        {
+          "capability_name": "wiki-search",
+          "component_id": "mcp-community-wikipedia",
+          "component_type": "mcp",
+          "label": "Wikipedia-Suche",
+          "tools": [
+            "search"
+          ]
+        },
+        {
+          "capability_name": "wiki-article",
+          "component_id": "mcp-community-wikipedia",
+          "component_type": "mcp",
+          "label": "Artikel-Abruf",
+          "tools": [
+            "get_article"
+          ]
+        },
+        {
+          "capability_name": "wiki-random",
+          "component_id": "mcp-community-wikipedia",
+          "component_type": "mcp",
+          "label": "Zufallsartikel",
+          "tools": [
+            "random"
+          ]
+        },
+        {
+          "capability_name": "web-scraping",
+          "component_id": "mcp-community-firecrawl",
+          "component_type": "mcp",
+          "label": "Web-Scraping",
+          "tools": [
+            "firecrawl_scrape"
+          ]
+        },
+        {
+          "capability_name": "site-mapping-firecrawl",
+          "component_id": "mcp-community-firecrawl",
+          "component_type": "mcp",
+          "label": "Site-Mapping",
+          "tools": [
+            "firecrawl_map"
+          ]
+        },
+        {
+          "capability_name": "site-crawling-firecrawl",
+          "component_id": "mcp-community-firecrawl",
+          "component_type": "mcp",
+          "label": "Site-Crawling",
+          "tools": [
+            "firecrawl_crawl"
+          ]
+        },
+        {
+          "capability_name": "structured-extraction",
+          "component_id": "mcp-community-firecrawl",
+          "component_type": "mcp",
+          "label": "Strukturierte Extraktion",
+          "tools": [
+            "firecrawl_extract"
+          ]
+        },
+        {
+          "capability_name": "firecrawl-search",
+          "component_id": "mcp-community-firecrawl",
+          "component_type": "mcp",
+          "label": "Firecrawl-Suche",
+          "tools": [
+            "firecrawl_search"
+          ]
+        },
+        {
+          "capability_name": "ai-search",
+          "component_id": "mcp-community-perplexity",
+          "component_type": "mcp",
+          "label": "KI-Websuche",
+          "tools": [
+            "perplexity_ask",
+            "perplexity_search"
+          ]
+        },
+        {
+          "capability_name": "deep-research-perplexity",
+          "component_id": "mcp-community-perplexity",
+          "component_type": "mcp",
+          "label": "Deep Research",
+          "tools": [
+            "perplexity_research"
+          ]
+        },
+        {
+          "capability_name": "reasoning",
+          "component_id": "mcp-community-perplexity",
+          "component_type": "mcp",
+          "label": "Reasoning mit Quellen",
+          "tools": [
+            "perplexity_reason"
+          ]
+        },
+        {
+          "capability_name": "fact-checking",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Fakten-Check"
+        },
+        {
+          "capability_name": "library-research",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Library-/Framework-Recherche"
+        },
+        {
+          "capability_name": "tech-evaluation",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Technologie-Evaluation"
+        },
+        {
+          "capability_name": "documentation-analysis",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Dokumentations-Analyse"
+        },
+        {
+          "capability_name": "code-research",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Code-Recherche"
+        },
+        {
+          "capability_name": "academic-research",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Akademische Recherche"
+        },
+        {
+          "capability_name": "market-research",
+          "component_id": "skill-own-deep-research",
+          "component_type": "skill",
+          "label": "Markt-/Company-Research"
+        },
+        {
+          "capability_name": "enterprise-search-integration",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Enterprise-Suche",
+          "sub_plugin": "enterprise-search"
+        },
+        {
+          "capability_name": "bio-research",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Bio-/Life-Sciences-Recherche",
+          "sub_plugin": "bio-research"
+        }
+      ]
+    },
+    "automation": {
+      "label": "Workflow-Automatisierung",
+      "capabilities": [
+        {
+          "capability_name": "file-classification",
+          "component_id": "skill-own-golden-import",
+          "component_type": "skill",
+          "label": "Datei-Klassifikation"
+        },
+        {
+          "capability_name": "multi-agent-workflow",
+          "component_id": "template-community-ai-coding-starter-kit",
+          "component_type": "template",
+          "label": "6-Agenten-Workflow"
+        },
+        {
+          "capability_name": "node-documentation",
+          "component_id": "mcp-community-n8n",
+          "component_type": "mcp",
+          "label": "Node-Dokumentation",
+          "tools": [
+            "tools_documentation",
+            "search_nodes",
+            "get_node"
+          ]
+        },
+        {
+          "capability_name": "template-management",
+          "component_id": "mcp-community-n8n",
+          "component_type": "mcp",
+          "label": "Template-Verwaltung",
+          "tools": [
+            "get_template",
+            "search_templates",
+            "n8n_deploy_template"
+          ]
+        },
+        {
+          "capability_name": "workflow-management",
+          "component_id": "mcp-community-n8n",
+          "component_type": "mcp",
+          "label": "Workflow-Verwaltung",
+          "tools": [
+            "n8n_create_workflow",
+            "n8n_get_workflow",
+            "n8n_update_full_workflow",
+            "n8n_update_partial_workflow",
+            "n8n_delete_workflow",
+            "n8n_list_workflows"
+          ]
+        },
+        {
+          "capability_name": "workflow-execution",
+          "component_id": "mcp-community-n8n",
+          "component_type": "mcp",
+          "label": "Workflow-Ausfuehrung",
+          "tools": [
+            "n8n_test_workflow",
+            "n8n_executions",
+            "n8n_health_check",
+            "n8n_workflow_versions"
+          ]
+        },
+        {
+          "capability_name": "node-setup",
+          "component_id": "skill-community-n8n-node-configuration",
+          "component_type": "skill",
+          "label": "Node-Konfiguration"
+        },
+        {
+          "capability_name": "property-management",
+          "component_id": "skill-community-n8n-node-configuration",
+          "component_type": "skill",
+          "label": "Property-Verwaltung"
+        },
+        {
+          "capability_name": "multi-agent-pipeline",
+          "component_id": "template-own-n8n-workflow-starter",
+          "component_type": "template",
+          "label": "6-Agenten-Pipeline"
+        }
+      ]
+    },
+    "scaffolding": {
+      "label": "Projekt-Scaffolding",
+      "capabilities": [
+        {
+          "capability_name": "fullstack-webapp-scaffold",
+          "component_id": "template-community-ai-coding-starter-kit",
+          "component_type": "template",
+          "label": "Fullstack-Webapp-Scaffolding"
+        },
+        {
+          "capability_name": "n8n-project-scaffold",
+          "component_id": "template-own-n8n-workflow-starter",
+          "component_type": "template",
+          "label": "n8n Projekt-Scaffolding"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "Workflow-Patterns",
+      "capabilities": [
+        {
+          "capability_name": "webhook-patterns",
+          "component_id": "skill-community-n8n-workflow-patterns",
+          "component_type": "skill",
+          "label": "Webhook-Patterns"
+        },
+        {
+          "capability_name": "api-patterns",
+          "component_id": "skill-community-n8n-workflow-patterns",
+          "component_type": "skill",
+          "label": "HTTP-API-Patterns"
+        },
+        {
+          "capability_name": "scheduled-patterns",
+          "component_id": "skill-community-n8n-workflow-patterns",
+          "component_type": "skill",
+          "label": "Scheduled-Task-Patterns"
+        },
+        {
+          "capability_name": "ai-agent-patterns",
+          "component_id": "skill-community-n8n-workflow-patterns",
+          "component_type": "skill",
+          "label": "AI-Agent-Patterns"
+        }
+      ]
+    },
+    "coding": {
+      "label": "Code & Scripting",
+      "capabilities": [
+        {
+          "capability_name": "expression-validation",
+          "component_id": "skill-community-n8n-expression-syntax",
+          "component_type": "skill",
+          "label": "Expression-Validierung"
+        },
+        {
+          "capability_name": "javascript-code-nodes",
+          "component_id": "skill-community-n8n-code-javascript",
+          "component_type": "skill",
+          "label": "JavaScript in Code Nodes"
+        },
+        {
+          "capability_name": "http-helpers",
+          "component_id": "skill-community-n8n-code-javascript",
+          "component_type": "skill",
+          "label": "HTTP-Requests mit $helpers"
+        },
+        {
+          "capability_name": "python-code-nodes",
+          "component_id": "skill-community-n8n-code-python",
+          "component_type": "skill",
+          "label": "Python in Code Nodes"
+        },
+        {
+          "capability_name": "frontend-design",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Frontend-Design & UI",
+          "sub_plugin": "frontend-design"
+        }
+      ]
+    },
+    "validation": {
+      "label": "Validierung & Debugging",
+      "capabilities": [
+        {
+          "capability_name": "project-consistency-check",
+          "component_id": "skill-own-golden-systemcheck",
+          "component_type": "skill",
+          "label": "Projekt-Konsistenzpruefung"
+        },
+        {
+          "capability_name": "git-health-check",
+          "component_id": "skill-own-golden-systemcheck",
+          "component_type": "skill",
+          "label": "Git-Status-Pruefung"
+        },
+        {
+          "capability_name": "workflow-validation",
+          "component_id": "mcp-community-n8n",
+          "component_type": "mcp",
+          "label": "Workflow-Validierung",
+          "tools": [
+            "validate_node",
+            "validate_workflow",
+            "n8n_validate_workflow",
+            "n8n_autofix_workflow"
+          ]
+        },
+        {
+          "capability_name": "expression-debugging",
+          "component_id": "skill-community-n8n-expression-syntax",
+          "component_type": "skill",
+          "label": "Expression-Debugging"
+        },
+        {
+          "capability_name": "workflow-error-analysis",
+          "component_id": "skill-community-n8n-validation-expert",
+          "component_type": "skill",
+          "label": "Workflow-Fehleranalyse"
+        },
+        {
+          "capability_name": "auto-fix",
+          "component_id": "skill-community-n8n-validation-expert",
+          "component_type": "skill",
+          "label": "Auto-Fix fuer Validierungsfehler"
+        }
+      ]
+    },
+    "session": {
+      "label": "Session-Management",
+      "capabilities": [
+        {
+          "capability_name": "input-queue-check",
+          "component_id": "skill-own-golden-systemcheck",
+          "component_type": "skill",
+          "label": "Input-Queue-Pruefung"
+        },
+        {
+          "capability_name": "session-close",
+          "component_id": "skill-own-golden-tagesabschluss",
+          "component_type": "skill",
+          "label": "Session-Abschluss"
+        },
+        {
+          "capability_name": "session-log-update",
+          "component_id": "skill-own-golden-tagesabschluss",
+          "component_type": "skill",
+          "label": "Session-Log-Aktualisierung"
+        },
+        {
+          "capability_name": "inbox-processing",
+          "component_id": "skill-own-golden-import",
+          "component_type": "skill",
+          "label": "Inbox-Verarbeitung"
+        },
+        {
+          "capability_name": "session-start",
+          "component_id": "skill-own-golden-session-boot",
+          "component_type": "skill",
+          "label": "Session-Start"
+        },
+        {
+          "capability_name": "context-loading",
+          "component_id": "skill-own-golden-session-boot",
+          "component_type": "skill",
+          "label": "Kontext-Laden"
+        }
+      ]
+    },
+    "planning": {
+      "label": "Planung & Kapazitaet",
+      "capabilities": [
+        {
+          "capability_name": "daily-planning",
+          "component_id": "skill-own-golden-session-boot",
+          "component_type": "skill",
+          "label": "Tagesplan-Vorschlag"
+        },
+        {
+          "capability_name": "weekly-review",
+          "component_id": "skill-own-golden-weekly-planning",
+          "component_type": "skill",
+          "label": "Wochenrueckblick"
+        },
+        {
+          "capability_name": "capacity-planning",
+          "component_id": "skill-own-golden-weekly-planning",
+          "component_type": "skill",
+          "label": "Kapazitaetsplanung"
+        },
+        {
+          "capability_name": "priority-management",
+          "component_id": "skill-own-golden-weekly-planning",
+          "component_type": "skill",
+          "label": "Priorisierung"
+        },
+        {
+          "capability_name": "productivity-workflows",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Produktivitaets-Workflows",
+          "sub_plugin": "productivity"
+        },
+        {
+          "capability_name": "product-management-workflows",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Produktmanagement-Workflows",
+          "sub_plugin": "product-management"
+        }
+      ]
+    },
+    "sales": {
+      "label": "Vertrieb & Angebote",
+      "capabilities": [
+        {
+          "capability_name": "proposal-generation",
+          "component_id": "plugin-own-we-documents",
+          "component_type": "plugin",
+          "label": "Angebotserstellung",
+          "command": "/angebot"
+        },
+        {
+          "capability_name": "estimate-management",
+          "component_id": "mcp-own-papierkram",
+          "component_type": "mcp",
+          "label": "Angebotsverwaltung",
+          "tools": [
+            "list_estimates",
+            "get_estimate",
+            "create_estimate",
+            "update_estimate",
+            "delete_estimate",
+            "send_estimate",
+            "download_estimate_pdf"
+          ]
+        },
+        {
+          "capability_name": "sales-workflows",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Vertriebs-Workflows",
+          "sub_plugin": "sales"
+        }
+      ]
+    },
+    "integration": {
+      "label": "System-Integration",
+      "capabilities": [
+        {
+          "capability_name": "n8n-tool-usage",
+          "component_id": "skill-community-n8n-mcp-tools-expert",
+          "component_type": "skill",
+          "label": "n8n MCP-Tool-Expertise"
+        }
+      ]
+    },
+    "code-quality": {
+      "label": "Code-Qualitaet & Review",
+      "capabilities": [
+        {
+          "capability_name": "code-review",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Code-Review & Qualitaetspruefung",
+          "sub_plugin": "code-review"
+        },
+        {
+          "capability_name": "pr-review",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Pull-Request-Review",
+          "sub_plugin": "pr-review-toolkit"
+        },
+        {
+          "capability_name": "code-simplification",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Code-Vereinfachung",
+          "sub_plugin": "code-simplifier"
+        }
+      ]
+    },
+    "dev-tools": {
+      "label": "Entwicklungs-Werkzeuge",
+      "capabilities": [
+        {
+          "capability_name": "plugin-lifecycle-management",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Plugin-Verwaltung",
+          "sub_plugin": "cowork-plugin-management"
+        },
+        {
+          "capability_name": "feature-development",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Feature-Entwicklung",
+          "sub_plugin": "feature-dev"
+        },
+        {
+          "capability_name": "plugin-development",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Plugin-Entwicklung",
+          "sub_plugin": "plugin-dev"
+        },
+        {
+          "capability_name": "skill-creation",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Skill-Erstellung",
+          "sub_plugin": "skill-creator"
+        },
+        {
+          "capability_name": "hook-creation",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Hook-Erstellung & Hookify",
+          "sub_plugin": "hookify"
+        },
+        {
+          "capability_name": "commit-workflow",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Commit-Workflow-Optimierung",
+          "sub_plugin": "commit-commands"
+        },
+        {
+          "capability_name": "agent-sdk-development",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Agent SDK Entwicklung",
+          "sub_plugin": "agent-sdk-dev"
+        },
+        {
+          "capability_name": "claude-md-management",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "CLAUDE.md Verwaltung",
+          "sub_plugin": "claude-md-management"
+        },
+        {
+          "capability_name": "claude-code-setup",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Claude Code Projekt-Setup",
+          "sub_plugin": "claude-code-setup"
+        },
+        {
+          "capability_name": "iterative-development",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Iterative Entwicklung (Ralph Loop)",
+          "sub_plugin": "ralph-loop"
+        },
+        {
+          "capability_name": "plugin-playground",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Plugin-Playground",
+          "sub_plugin": "playground"
+        }
+      ]
+    },
+    "security": {
+      "label": "Sicherheit",
+      "capabilities": [
+        {
+          "capability_name": "security-guidance",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Sicherheitsanalyse & Guidance",
+          "sub_plugin": "security-guidance"
+        }
+      ]
+    },
+    "business-ops": {
+      "label": "Geschaeftsprozesse",
+      "capabilities": [
+        {
+          "capability_name": "finance-analysis",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Finanz-Analyse & Berichte",
+          "sub_plugin": "finance"
+        },
+        {
+          "capability_name": "legal-review",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Juristische Pruefung & Analyse",
+          "sub_plugin": "legal"
+        },
+        {
+          "capability_name": "marketing-content",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Marketing-Content-Erstellung",
+          "sub_plugin": "marketing"
+        },
+        {
+          "capability_name": "customer-support-workflows",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Kundensupport-Workflows",
+          "sub_plugin": "customer-support"
+        }
+      ]
+    },
+    "data-analytics": {
+      "label": "Datenanalyse",
+      "capabilities": [
+        {
+          "capability_name": "data-analysis",
+          "component_id": "plugin-community-anthropic-knowledge-work",
+          "component_type": "plugin",
+          "label": "Datenanalyse & Transformation",
+          "sub_plugin": "data"
+        }
+      ]
+    },
+    "learning": {
+      "label": "Lernmodus & Erklaerungen",
+      "capabilities": [
+        {
+          "capability_name": "explanatory-output",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Erklaerende Ausgabe",
+          "sub_plugin": "explanatory-output-style"
+        },
+        {
+          "capability_name": "learning-mode",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Lernmodus-Ausgabe",
+          "sub_plugin": "learning-output-style"
+        }
+      ]
+    },
+    "lsp": {
+      "label": "Language Server Protocol",
+      "capabilities": [
+        {
+          "capability_name": "lsp-typescript",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "TypeScript LSP",
+          "sub_plugin": "typescript-lsp"
+        },
+        {
+          "capability_name": "lsp-python",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Python LSP (Pyright)",
+          "sub_plugin": "pyright-lsp"
+        },
+        {
+          "capability_name": "lsp-rust",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Rust LSP (rust-analyzer)",
+          "sub_plugin": "rust-analyzer-lsp"
+        },
+        {
+          "capability_name": "lsp-go",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Go LSP (gopls)",
+          "sub_plugin": "gopls-lsp"
+        },
+        {
+          "capability_name": "lsp-cpp",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "C/C++ LSP (clangd)",
+          "sub_plugin": "clangd-lsp"
+        },
+        {
+          "capability_name": "lsp-java",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Java LSP (jdtls)",
+          "sub_plugin": "jdtls-lsp"
+        },
+        {
+          "capability_name": "lsp-kotlin",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Kotlin LSP",
+          "sub_plugin": "kotlin-lsp"
+        },
+        {
+          "capability_name": "lsp-swift",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Swift LSP",
+          "sub_plugin": "swift-lsp"
+        },
+        {
+          "capability_name": "lsp-php",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "PHP LSP",
+          "sub_plugin": "php-lsp"
+        },
+        {
+          "capability_name": "lsp-lua",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "Lua LSP",
+          "sub_plugin": "lua-lsp"
+        },
+        {
+          "capability_name": "lsp-csharp",
+          "component_id": "plugin-community-anthropic-official-directory",
+          "component_type": "plugin",
+          "label": "C# LSP",
+          "sub_plugin": "csharp-lsp"
+        }
+      ]
+    }
+  },
+  "by_component": {
+    "skill-own-golden-systemcheck": {
+      "name": "Golden Systemcheck",
+      "type": "skill",
+      "status": "planned",
+      "capabilities": [
+        "project-consistency-check",
+        "git-health-check",
+        "input-queue-check"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "skill-own-golden-tagesabschluss": {
+      "name": "Golden Tagesabschluss",
+      "type": "skill",
+      "status": "planned",
+      "capabilities": [
+        "session-close",
+        "session-log-update"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "skill-own-golden-import": {
+      "name": "Golden Import",
+      "type": "skill",
+      "status": "planned",
+      "capabilities": [
+        "inbox-processing",
+        "file-classification"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "skill-own-golden-session-boot": {
+      "name": "Golden Session-Boot",
+      "type": "skill",
+      "status": "planned",
+      "capabilities": [
+        "session-start",
+        "context-loading",
+        "daily-planning"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "skill-own-golden-weekly-planning": {
+      "name": "Golden Wochenplanung",
+      "type": "skill",
+      "status": "planned",
+      "capabilities": [
+        "weekly-review",
+        "capacity-planning",
+        "priority-management"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "skill-own-we-brand-guidelines": {
+      "name": "WE Brand Guidelines",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "color-palette",
+        "typography",
+        "logo-guidelines",
+        "tone-of-voice",
+        "document-templates-reference"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "plugin-own-we-documents"
+      ]
+    },
+    "plugin-own-we-documents": {
+      "name": "WE Documents",
+      "type": "plugin",
+      "status": "active",
+      "capabilities": [
+        "invoice-generation",
+        "proposal-generation",
+        "letter-generation",
+        "presentation-generation",
+        "one-pager-generation",
+        "email-signature"
+      ],
+      "depends_on": [
+        "skill-own-we-brand-guidelines"
+      ],
+      "depended_by": []
+    },
+    "template-community-ai-coding-starter-kit": {
+      "name": "AI Coding Starter Kit",
+      "type": "template",
+      "status": "active",
+      "capabilities": [
+        "fullstack-webapp-scaffold",
+        "multi-agent-workflow"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "mcp-own-papierkram": {
+      "name": "Papierkram MCP Server",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "invoice-management",
+        "estimate-management",
+        "contact-management",
+        "project-management",
+        "time-tracking",
+        "task-management",
+        "expense-management",
+        "banking",
+        "account-info"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-leistungsnachweis",
+        "plugin-own-zeiterfassung",
+        "skill-own-kommunikation"
+      ]
+    },
+    "skill-own-leistungsnachweis": {
+      "name": "Leistungsnachweis",
+      "type": "skill",
+      "status": "deprecated",
+      "capabilities": [
+        "performance-report"
+      ],
+      "depends_on": [
+        "mcp-own-papierkram"
+      ],
+      "depended_by": []
+    },
+    "mcp-community-n8n": {
+      "name": "n8n MCP Server",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "node-documentation",
+        "workflow-validation",
+        "template-management",
+        "workflow-management",
+        "workflow-execution"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-community-n8n-mcp-tools-expert",
+        "skill-community-n8n-workflow-patterns",
+        "skill-community-n8n-expression-syntax",
+        "skill-community-n8n-validation-expert",
+        "skill-community-n8n-node-configuration",
+        "skill-community-n8n-code-javascript",
+        "skill-community-n8n-code-python"
+      ]
+    },
+    "skill-community-n8n-mcp-tools-expert": {
+      "name": "n8n MCP Tools Expert",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "n8n-tool-usage"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "skill-community-n8n-workflow-patterns": {
+      "name": "n8n Workflow Patterns",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "webhook-patterns",
+        "api-patterns",
+        "scheduled-patterns",
+        "ai-agent-patterns"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "skill-community-n8n-expression-syntax": {
+      "name": "n8n Expression Syntax",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "expression-validation",
+        "expression-debugging"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "skill-community-n8n-validation-expert": {
+      "name": "n8n Validation Expert",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "workflow-error-analysis",
+        "auto-fix"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "skill-community-n8n-node-configuration": {
+      "name": "n8n Node Configuration",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "node-setup",
+        "property-management"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "skill-community-n8n-code-javascript": {
+      "name": "n8n Code JavaScript",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "javascript-code-nodes",
+        "http-helpers"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "skill-community-n8n-code-python": {
+      "name": "n8n Code Python",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "python-code-nodes"
+      ],
+      "depends_on": [
+        "mcp-community-n8n"
+      ],
+      "depended_by": []
+    },
+    "template-own-n8n-workflow-starter": {
+      "name": "n8n Multi-Agent Workflow Starter",
+      "type": "template",
+      "status": "active",
+      "capabilities": [
+        "n8n-project-scaffold",
+        "multi-agent-pipeline"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "plugin-own-zeiterfassung": {
+      "name": "Zeiterfassung",
+      "type": "plugin",
+      "status": "active",
+      "capabilities": [
+        "performance-report-generation",
+        "worklog-status",
+        "worklog-migration",
+        "time-booking",
+        "token-cost-calculation"
+      ],
+      "depends_on": [
+        "mcp-own-papierkram"
+      ],
+      "depended_by": []
+    },
+    "skill-own-kommunikation": {
+      "name": "Kommunikations-Customizer",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "customer-style-matching",
+        "email-analysis",
+        "address-mode-management"
+      ],
+      "depends_on": [
+        "mcp-own-papierkram"
+      ],
+      "depended_by": []
+    },
+    "mcp-community-context7": {
+      "name": "Context7 — Live Documentation",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "library-documentation",
+        "code-examples"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-brave-search": {
+      "name": "Brave Search — Web Search",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "web-search",
+        "local-search"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-exa": {
+      "name": "Exa AI — Semantic Search",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "semantic-search",
+        "code-context-search",
+        "company-research"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-jina": {
+      "name": "Jina AI Reader — Content Extraction",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "url-to-markdown",
+        "web-search-jina",
+        "arxiv-access",
+        "screenshot"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-tavily": {
+      "name": "Tavily — Production Web Research",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "web-search-tavily",
+        "content-extraction",
+        "site-crawling",
+        "site-mapping",
+        "deep-research-tavily"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-arxiv": {
+      "name": "ArXiv — Academic Papers",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "paper-search",
+        "paper-download",
+        "paper-analysis"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-wikipedia": {
+      "name": "Wikipedia — Knowledge Base",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "wiki-search",
+        "wiki-article",
+        "wiki-random"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-firecrawl": {
+      "name": "Firecrawl — Enterprise Web Scraping",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "web-scraping",
+        "site-mapping-firecrawl",
+        "site-crawling-firecrawl",
+        "structured-extraction",
+        "firecrawl-search"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "mcp-community-perplexity": {
+      "name": "Perplexity AI — Deep Research",
+      "type": "mcp",
+      "status": "active",
+      "capabilities": [
+        "ai-search",
+        "deep-research-perplexity",
+        "reasoning"
+      ],
+      "depends_on": [],
+      "depended_by": [
+        "skill-own-deep-research"
+      ]
+    },
+    "skill-own-deep-research": {
+      "name": "Deep Research",
+      "type": "skill",
+      "status": "active",
+      "capabilities": [
+        "fact-checking",
+        "library-research",
+        "tech-evaluation",
+        "documentation-analysis",
+        "code-research",
+        "academic-research",
+        "market-research"
+      ],
+      "depends_on": [
+        "mcp-community-firecrawl",
+        "mcp-community-exa",
+        "mcp-community-perplexity",
+        "mcp-community-jina",
+        "mcp-community-brave-search",
+        "mcp-community-tavily",
+        "mcp-community-arxiv",
+        "mcp-community-wikipedia",
+        "mcp-community-context7"
+      ],
+      "depended_by": []
+    },
+    "plugin-community-anthropic-knowledge-work": {
+      "name": "Anthropic Knowledge Work Plugins",
+      "type": "plugin",
+      "status": "active",
+      "capabilities": [
+        "sales-workflows",
+        "finance-analysis",
+        "legal-review",
+        "marketing-content",
+        "data-analysis",
+        "customer-support-workflows",
+        "enterprise-search-integration",
+        "bio-research",
+        "productivity-workflows",
+        "product-management-workflows",
+        "plugin-lifecycle-management"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    },
+    "plugin-community-anthropic-official-directory": {
+      "name": "Anthropic Official Plugin Directory",
+      "type": "plugin",
+      "status": "active",
+      "capabilities": [
+        "code-review",
+        "feature-development",
+        "security-guidance",
+        "plugin-development",
+        "skill-creation",
+        "hook-creation",
+        "commit-workflow",
+        "pr-review",
+        "agent-sdk-development",
+        "claude-md-management",
+        "claude-code-setup",
+        "frontend-design",
+        "code-simplification",
+        "explanatory-output",
+        "learning-mode",
+        "lsp-typescript",
+        "lsp-python",
+        "lsp-rust",
+        "lsp-go",
+        "lsp-cpp",
+        "lsp-java",
+        "lsp-kotlin",
+        "lsp-swift",
+        "lsp-php",
+        "lsp-lua",
+        "lsp-csharp",
+        "iterative-development",
+        "plugin-playground"
+      ],
+      "depends_on": [],
+      "depended_by": []
+    }
+  },
+  "dependency_graph": {
+    "edges": [
+      {
+        "from": "plugin-own-we-documents",
+        "to": "skill-own-we-brand-guidelines",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-leistungsnachweis",
+        "to": "mcp-own-papierkram",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-mcp-tools-expert",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-workflow-patterns",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-workflow-patterns",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-workflow-patterns",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-workflow-patterns",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-expression-syntax",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-expression-syntax",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-validation-expert",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-validation-expert",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-node-configuration",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-node-configuration",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-code-javascript",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-code-javascript",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "skill-community-n8n-code-python",
+        "to": "mcp-community-n8n",
+        "type": "capability"
+      },
+      {
+        "from": "plugin-own-zeiterfassung",
+        "to": "mcp-own-papierkram",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-kommunikation",
+        "to": "mcp-own-papierkram",
+        "type": "capability"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-perplexity",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-context7",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-brave-search",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-exa",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-jina",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-tavily",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-arxiv",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-wikipedia",
+        "type": "component"
+      },
+      {
+        "from": "skill-own-deep-research",
+        "to": "mcp-community-firecrawl",
+        "type": "component"
+      }
+    ]
+  },
+  "search_index": [
+    {
+      "term": "$helpers",
+      "matches": [
+        "skill-community-n8n-code-javascript"
+      ]
+    },
+    {
+      "term": "(clangd)",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "(gopls)",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "(jdtls)",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "(pyright)",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "(ralph",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "(rust-analyzer)",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "6-agenten-pipeline",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "6-agenten-workflow",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "academic",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "academic-research",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "account-info",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "accounting",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "address-mode-management",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "agent",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "agent-sdk-development",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "ai-agent-patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "ai-search",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "akademische",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "analyse",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "angebot",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "angebotserstellung",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "angebotsverwaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "anthropic",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work",
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "api-patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "architecture",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "archive_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "archive_project",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "artikel-abruf",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "arxiv",
+      "matches": [
+        "mcp-community-arxiv",
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "arxiv-access",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "arxiv-zugriff",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "aufgabenverwaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "ausgabe",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "ausgabenverwaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "auto-fix",
+      "matches": [
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "automation",
+      "matches": [
+        "mcp-community-n8n",
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "banking",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "bankverbindungen",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "berichte",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "bio-/life-sciences-recherche",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "bio-research",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "boot",
+      "matches": [
+        "skill-own-golden-session-boot"
+      ]
+    },
+    {
+      "term": "branding",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "brave_local_search",
+      "matches": [
+        "mcp-community-brave-search"
+      ]
+    },
+    {
+      "term": "brave_web_search",
+      "matches": [
+        "mcp-community-brave-search"
+      ]
+    },
+    {
+      "term": "brief",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "brieferstellung",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "buchhaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "c/c++",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "cancel_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "capacity-planning",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "claude",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "claude-code-setup",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "claude-md-management",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "claude.md",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "code",
+      "matches": [
+        "plugin-community-anthropic-official-directory",
+        "skill-community-n8n-code-javascript",
+        "skill-community-n8n-code-python"
+      ]
+    },
+    {
+      "term": "code-beispiele",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "code-context",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "code-context-search",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "code-examples",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "code-kontext-suche",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "code-recherche",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "code-research",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "code-review",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "code-simplification",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "code-vereinfachung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "coding",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "color-palette",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "commit-workflow",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "commit-workflow-optimierung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "communication",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "company",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "company-research",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "company_research_exa",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "configuration",
+      "matches": [
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "contact-management",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "content-extraction",
+      "matches": [
+        "mcp-community-jina",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "content-extraktion",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "context-loading",
+      "matches": [
+        "skill-own-golden-session-boot"
+      ]
+    },
+    {
+      "term": "corporate-identity",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "crawling",
+      "matches": [
+        "mcp-community-firecrawl",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "create_company",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_contact_person",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_estimate",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_expense_voucher",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_project",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_task",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "create_time_entry",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "customer",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "customer-project",
+      "matches": [
+        "plugin-own-zeiterfassung",
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "customer-style-matching",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "customer-support",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "customer-support-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "daily",
+      "matches": [
+        "skill-own-golden-tagesabschluss"
+      ]
+    },
+    {
+      "term": "daily-planning",
+      "matches": [
+        "skill-own-golden-session-boot"
+      ]
+    },
+    {
+      "term": "data",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "data-analysis",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "datei-klassifikation",
+      "matches": [
+        "skill-own-golden-import"
+      ]
+    },
+    {
+      "term": "datenanalyse",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "debugging",
+      "matches": [
+        "skill-community-n8n-expression-syntax",
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "deep",
+      "matches": [
+        "mcp-community-perplexity",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "deep-research",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "deep-research-perplexity",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "deep-research-tavily",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "delete_company",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_contact_person",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_estimate",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_expense_voucher",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_project",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_task",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "delete_time_entry",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "design",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "design-tokens",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "document-templates-reference",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "documentation",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "documentation-analysis",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "documents",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "docx",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "dokumentations-analyse",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "dokumentvorlagen-referenz",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "download_estimate_pdf",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "download_invoice_pdf",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "download_paper",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "du/sie-verwaltung",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "e-mail-signatur",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "e-mail-stilanalyse",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "email",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "email-analysis",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "email-signature",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "enterprise-search-integration",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "enterprise-suche",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "entwicklung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "erklaerende",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "errors",
+      "matches": [
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "estimate-management",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "expense-management",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "explanatory-output",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "expression-debugging",
+      "matches": [
+        "skill-community-n8n-expression-syntax"
+      ]
+    },
+    {
+      "term": "expression-validation",
+      "matches": [
+        "skill-community-n8n-expression-syntax"
+      ]
+    },
+    {
+      "term": "expression-validierung",
+      "matches": [
+        "skill-community-n8n-expression-syntax"
+      ]
+    },
+    {
+      "term": "expressions",
+      "matches": [
+        "skill-community-n8n-expression-syntax"
+      ]
+    },
+    {
+      "term": "extraction",
+      "matches": [
+        "mcp-community-firecrawl",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "extraktion",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "fact-checking",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "fakten-check",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "farbpalette",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "feature-dev",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "feature-development",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "feature-entwicklung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "fetch_arxiv",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "file-classification",
+      "matches": [
+        "skill-own-golden-import"
+      ]
+    },
+    {
+      "term": "finance",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "finance-analysis",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "finanz-analyse",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "firecrawl-search",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "firecrawl-suche",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "firecrawl_crawl",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "firecrawl_extract",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "firecrawl_map",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "firecrawl_scrape",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "firecrawl_search",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "frontend",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "frontend-design",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "fuer",
+      "matches": [
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "fullstack",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "fullstack-webapp-scaffold",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "fullstack-webapp-scaffolding",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "get_account_info",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_article",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "get_bank_connection",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_bank_transaction",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_code_context_exa",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "get_company",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_contact_person",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_estimate",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_expense_voucher",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_node",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "get_project",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_proposition",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_task",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "get_template",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "get_time_entry",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "git-health-check",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "git-status-pruefung",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "golden",
+      "matches": [
+        "skill-own-golden-import",
+        "skill-own-golden-session-boot",
+        "skill-own-golden-systemcheck",
+        "skill-own-golden-tagesabschluss",
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "graph-api",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "guidance",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "hook-creation",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "hook-erstellung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "hookify",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "html",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "http-api-patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "http-helpers",
+      "matches": [
+        "skill-community-n8n-code-javascript"
+      ]
+    },
+    {
+      "term": "http-requests",
+      "matches": [
+        "skill-community-n8n-code-javascript"
+      ]
+    },
+    {
+      "term": "import",
+      "matches": [
+        "skill-own-golden-import"
+      ]
+    },
+    {
+      "term": "inbox",
+      "matches": [
+        "skill-own-golden-import"
+      ]
+    },
+    {
+      "term": "inbox-processing",
+      "matches": [
+        "skill-own-golden-import"
+      ]
+    },
+    {
+      "term": "inbox-verarbeitung",
+      "matches": [
+        "skill-own-golden-import"
+      ]
+    },
+    {
+      "term": "input-queue-check",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "input-queue-pruefung",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "invoice-generation",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "invoice-management",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "invoices",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "iterative",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "iterative-development",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "java",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "javascript",
+      "matches": [
+        "skill-community-n8n-code-javascript"
+      ]
+    },
+    {
+      "term": "javascript-code-nodes",
+      "matches": [
+        "skill-community-n8n-code-javascript"
+      ]
+    },
+    {
+      "term": "juristische",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "kapazitaetsplanung",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "ki-websuche",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "knowledge",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "knowledge-work",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "kommunikationsstil",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "kontaktverwaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "kontext-laden",
+      "matches": [
+        "skill-own-golden-session-boot"
+      ]
+    },
+    {
+      "term": "kontoinformationen",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "kotlin",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "kundenspezifischer",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "kundensupport-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "learning-mode",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "legal",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "legal-review",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "leistungsnachweis",
+      "matches": [
+        "plugin-own-zeiterfassung",
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "leistungsnachweis-erstellung",
+      "matches": [
+        "plugin-own-zeiterfassung",
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "lernmodus-ausgabe",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "letter-generation",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "library-/framework-recherche",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "library-documentation",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "library-dokumentation",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "library-research",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "list_bank_connections",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_bank_transactions",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_companies",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_contact_persons",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_estimates",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_expense_vouchers",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_invoices",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_papers",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "list_payment_terms",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_projects",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_propositions",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_tasks",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "list_time_entries",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "local-search",
+      "matches": [
+        "mcp-community-brave-search"
+      ]
+    },
+    {
+      "term": "logo-guidelines",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "logo-richtlinien",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "lokale",
+      "matches": [
+        "mcp-community-brave-search"
+      ]
+    },
+    {
+      "term": "loop)",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-cpp",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-csharp",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-go",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-java",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-kotlin",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-lua",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-php",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-python",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-rust",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-swift",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "lsp-typescript",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "markdown",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "market-research",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "marketing",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "marketing-content",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "marketing-content-erstellung",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "markt-/company-research",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "mcp",
+      "matches": [
+        "mcp-community-n8n",
+        "mcp-own-papierkram",
+        "skill-community-n8n-mcp-tools-expert"
+      ]
+    },
+    {
+      "term": "mcp-tool-expertise",
+      "matches": [
+        "skill-community-n8n-mcp-tools-expert"
+      ]
+    },
+    {
+      "term": "microsoft-365",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "multi-agent",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "multi-agent-pipeline",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "multi-agent-workflow",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "multi-source",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "multilingual",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "n8n",
+      "matches": [
+        "mcp-community-n8n",
+        "skill-community-n8n-code-javascript",
+        "skill-community-n8n-code-python",
+        "skill-community-n8n-expression-syntax",
+        "skill-community-n8n-mcp-tools-expert",
+        "skill-community-n8n-node-configuration",
+        "skill-community-n8n-validation-expert",
+        "skill-community-n8n-workflow-patterns",
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "n8n-project-scaffold",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "n8n-tool-usage",
+      "matches": [
+        "skill-community-n8n-mcp-tools-expert"
+      ]
+    },
+    {
+      "term": "n8n_autofix_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_create_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_delete_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_deploy_template",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_executions",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_get_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_health_check",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_list_workflows",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_test_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_update_full_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_update_partial_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_validate_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "n8n_workflow_versions",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "node-documentation",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "node-dokumentation",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "node-konfiguration",
+      "matches": [
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "node-setup",
+      "matches": [
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "nodes",
+      "matches": [
+        "mcp-community-n8n",
+        "skill-community-n8n-code-javascript",
+        "skill-community-n8n-code-python",
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "official",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work",
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "one-pager",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "one-pager-erstellung",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "one-pager-generation",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "orchestration",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "paper-analyse",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "paper-analysis",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "paper-download",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "paper-search",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "paper-suche",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "papers",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "papierkram",
+      "matches": [
+        "mcp-own-papierkram",
+        "plugin-own-zeiterfassung",
+        "skill-own-kommunikation",
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "papierkram-zeitbuchung",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "performance-report",
+      "matches": [
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "performance-report-generation",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "perplexity_ask",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "perplexity_reason",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "perplexity_research",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "perplexity_search",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "planning",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "plugin-dev",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "plugin-development",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "plugin-entwicklung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "plugin-lifecycle-management",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "plugin-playground",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "plugin-verwaltung",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "pptx",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "pr-review",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "praesentation",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "praesentationserstellung",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "presentation-generation",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "priorisierung",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "priority-management",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "privacy",
+      "matches": [
+        "mcp-community-brave-search"
+      ]
+    },
+    {
+      "term": "product-management-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "productivity",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "productivity-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "produktivitaets-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "produktmanagement-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "project-consistency-check",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "project-management",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "projekt-konsistenzpruefung",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "projekt-scaffolding",
+      "matches": [
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "projekt-setup",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "projektverwaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "properties",
+      "matches": [
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "property-management",
+      "matches": [
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "property-verwaltung",
+      "matches": [
+        "skill-community-n8n-node-configuration"
+      ]
+    },
+    {
+      "term": "proposal-generation",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "pruefung",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "pull-request-review",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "python",
+      "matches": [
+        "plugin-community-anthropic-official-directory",
+        "skill-community-n8n-code-python"
+      ]
+    },
+    {
+      "term": "python-code-nodes",
+      "matches": [
+        "skill-community-n8n-code-python"
+      ]
+    },
+    {
+      "term": "qualitaetspruefung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "quellen",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "query-docs",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "random",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "read_paper",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "read_url",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "reasoning",
+      "matches": [
+        "mcp-community-perplexity"
+      ]
+    },
+    {
+      "term": "recherche",
+      "matches": [
+        "mcp-community-arxiv",
+        "mcp-community-brave-search",
+        "mcp-community-context7",
+        "mcp-community-exa",
+        "mcp-community-firecrawl",
+        "mcp-community-jina",
+        "mcp-community-perplexity",
+        "mcp-community-tavily",
+        "mcp-community-wikipedia",
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "rechnung",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "rechnungserstellung",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "rechnungsverwaltung",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "reporting",
+      "matches": [
+        "plugin-own-zeiterfassung",
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "research",
+      "matches": [
+        "mcp-community-exa",
+        "mcp-community-perplexity",
+        "mcp-community-tavily",
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "resolve-library-id",
+      "matches": [
+        "mcp-community-context7"
+      ]
+    },
+    {
+      "term": "rust",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "sales",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "sales-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "scheduled-patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "scheduled-task-patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "scraping",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "screenshot",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "screenshot-erstellung",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "scripting",
+      "matches": [
+        "skill-community-n8n-code-javascript",
+        "skill-community-n8n-code-python"
+      ]
+    },
+    {
+      "term": "search",
+      "matches": [
+        "mcp-community-jina",
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "search_nodes",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "search_papers",
+      "matches": [
+        "mcp-community-arxiv"
+      ]
+    },
+    {
+      "term": "search_templates",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "security",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "security-guidance",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "semantic-search",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "semantische",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "send_estimate",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "send_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "session",
+      "matches": [
+        "skill-own-golden-session-boot",
+        "skill-own-golden-tagesabschluss"
+      ]
+    },
+    {
+      "term": "session-abschluss",
+      "matches": [
+        "skill-own-golden-tagesabschluss"
+      ]
+    },
+    {
+      "term": "session-close",
+      "matches": [
+        "skill-own-golden-tagesabschluss"
+      ]
+    },
+    {
+      "term": "session-log-aktualisierung",
+      "matches": [
+        "skill-own-golden-tagesabschluss"
+      ]
+    },
+    {
+      "term": "session-log-update",
+      "matches": [
+        "skill-own-golden-tagesabschluss"
+      ]
+    },
+    {
+      "term": "session-start",
+      "matches": [
+        "skill-own-golden-session-boot"
+      ]
+    },
+    {
+      "term": "sicherheitsanalyse",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "signatur",
+      "matches": [
+        "plugin-own-we-documents"
+      ]
+    },
+    {
+      "term": "site-crawling",
+      "matches": [
+        "mcp-community-firecrawl",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "site-crawling-firecrawl",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "site-mapping",
+      "matches": [
+        "mcp-community-firecrawl",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "site-mapping-firecrawl",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "skill-creation",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "skill-erstellung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "sprachstil",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "structured-extraction",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "strukturierte",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "style",
+      "matches": [
+        "skill-own-kommunikation"
+      ]
+    },
+    {
+      "term": "suche",
+      "matches": [
+        "mcp-community-brave-search",
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "supabase",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "swift",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "syntax",
+      "matches": [
+        "skill-community-n8n-expression-syntax"
+      ]
+    },
+    {
+      "term": "systemcheck",
+      "matches": [
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "tagesplan-vorschlag",
+      "matches": [
+        "skill-own-golden-session-boot"
+      ]
+    },
+    {
+      "term": "task-management",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "tavily_crawl",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "tavily_extract",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "tavily_map",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "tavily_research",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "tavily_search",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "tech-evaluation",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "technologie-evaluation",
+      "matches": [
+        "skill-own-deep-research"
+      ]
+    },
+    {
+      "term": "template-management",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "template-verwaltung",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "time-booking",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "time-tracking",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "token-cost-calculation",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "token-kostenberechnung",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "tokens",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "tonalitaet",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "tone-of-voice",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "tools",
+      "matches": [
+        "skill-community-n8n-mcp-tools-expert"
+      ]
+    },
+    {
+      "term": "tools_documentation",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "transaktionen",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "transformation",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "typescript",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "typografie-system",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "typography",
+      "matches": [
+        "skill-own-we-brand-guidelines"
+      ]
+    },
+    {
+      "term": "unarchive_project",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_company",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_contact_person",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_estimate",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_expense_voucher",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_invoice",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_project",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_task",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "update_time_entry",
+      "matches": [
+        "mcp-own-papierkram"
+      ]
+    },
+    {
+      "term": "url-to-markdown",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "validate_node",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "validate_workflow",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "validation",
+      "matches": [
+        "skill-community-n8n-validation-expert",
+        "skill-own-golden-systemcheck"
+      ]
+    },
+    {
+      "term": "validierungsfehler",
+      "matches": [
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "vercel",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "vertriebs-workflows",
+      "matches": [
+        "plugin-community-anthropic-knowledge-work"
+      ]
+    },
+    {
+      "term": "verwaltung",
+      "matches": [
+        "plugin-community-anthropic-official-directory"
+      ]
+    },
+    {
+      "term": "web-scraping",
+      "matches": [
+        "mcp-community-firecrawl"
+      ]
+    },
+    {
+      "term": "web-search",
+      "matches": [
+        "mcp-community-brave-search",
+        "mcp-community-perplexity",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "web-search-jina",
+      "matches": [
+        "mcp-community-jina"
+      ]
+    },
+    {
+      "term": "web-search-tavily",
+      "matches": [
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "web_search_exa",
+      "matches": [
+        "mcp-community-exa"
+      ]
+    },
+    {
+      "term": "webapp",
+      "matches": [
+        "template-community-ai-coding-starter-kit"
+      ]
+    },
+    {
+      "term": "webhook-patterns",
+      "matches": [
+        "skill-community-n8n-workflow-patterns"
+      ]
+    },
+    {
+      "term": "websuche",
+      "matches": [
+        "mcp-community-brave-search",
+        "mcp-community-jina",
+        "mcp-community-tavily"
+      ]
+    },
+    {
+      "term": "weekly",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "weekly-review",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "wiki-article",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "wiki-random",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "wiki-search",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "wikipedia",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "wikipedia-suche",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    },
+    {
+      "term": "wochenrueckblick",
+      "matches": [
+        "skill-own-golden-weekly-planning"
+      ]
+    },
+    {
+      "term": "workflow",
+      "matches": [
+        "mcp-community-n8n",
+        "skill-community-n8n-mcp-tools-expert",
+        "skill-community-n8n-workflow-patterns",
+        "template-own-n8n-workflow-starter"
+      ]
+    },
+    {
+      "term": "workflow-ausfuehrung",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "workflow-error-analysis",
+      "matches": [
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "workflow-execution",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "workflow-fehleranalyse",
+      "matches": [
+        "skill-community-n8n-validation-expert"
+      ]
+    },
+    {
+      "term": "workflow-management",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "workflow-validation",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "workflow-validierung",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "workflow-verwaltung",
+      "matches": [
+        "mcp-community-n8n"
+      ]
+    },
+    {
+      "term": "worklog",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "worklog-migrate",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "worklog-migration",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "worklog-status",
+      "matches": [
+        "plugin-own-zeiterfassung"
+      ]
+    },
+    {
+      "term": "zeiterfassung",
+      "matches": [
+        "mcp-own-papierkram",
+        "plugin-own-zeiterfassung",
+        "skill-own-leistungsnachweis"
+      ]
+    },
+    {
+      "term": "zufallsartikel",
+      "matches": [
+        "mcp-community-wikipedia"
+      ]
+    }
+  ]
+}
